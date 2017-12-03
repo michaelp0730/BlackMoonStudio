@@ -1,0 +1,32 @@
+[
+    {
+        "Slug": "tapping",
+        "Title": "Tapping",
+        "Summary": "Unleash your inner EVH",
+        "ContentKey": "",
+        "Level": "Advanced",
+        "Genre": "",
+        "Videos": [
+            {
+                "Slug": "",
+                "Title": "",
+                "Caption": ""
+            }
+        ]
+    },
+    {
+        "Slug": "tremolo-picking",
+        "Title": "Tremolo Picking",
+        "Summary": "Improve your speed and rhythm for blazing fast runs",
+        "ContentKey": "",
+        "Level": "Advanced",
+        "Genre": "",
+        "Videos": [
+            {
+                "Slug": "",
+                "Title": "",
+                "Caption": ""
+            }
+        ]
+    }
+]

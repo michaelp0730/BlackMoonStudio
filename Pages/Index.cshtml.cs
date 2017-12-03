@@ -13,9 +13,13 @@ namespace BlackMoonStudio.Pages
     public class IndexModel : PageModel
     {
         public Lesson[] BeginnerLessons { get; set; }
+        public Lesson[] IntermediateLessons { get; set; }
+        public Lesson[] AdvancedLessons { get; set; }
         public void OnGetAsync()
         {
             BeginnerLessons = GetLessons("Beginner");
+            IntermediateLessons = GetLessons("Intermediate");
+            AdvancedLessons = GetLessons("Advanced");
         }
 
         private Lesson[] GetLessons(string level)

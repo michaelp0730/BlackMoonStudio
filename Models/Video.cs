@@ -6,6 +6,7 @@ namespace BlackMoonStudio.Models
     public class Video
     {
         public string Slug { get; set; }
+        public string Title { get; set; }
         public HtmlString Caption { get; set; }
     }
 }

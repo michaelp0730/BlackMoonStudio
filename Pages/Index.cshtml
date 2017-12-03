@@ -5,11 +5,12 @@
 }
 
 <div class="container-fluid">
-    <div class="row bg-primary">
+    <div class="row bg-navy">
         <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <h1>Free Guitar Lessons</h1>
             <p>Welcome to BlackMoonStudio! We're committed to providing you a curated course of free, high&ndash;quality guitar lessons. Basically, for each lesson, we write the content, then present a series of related videos and articles to help further explain the topic of that lesson.</p>
             <p>To learn more on what we're all about, <a asp-page="/About" style="color: white;">click here</a></p>
+            <p>Also &mdash; <strong>check back here regularly</strong> because the lesson lists are never complete!</p>
         </div>
     </div>
     <div class="row">
@@ -30,9 +31,27 @@
         }
             <div class="col-md-4">
                 <h2>Intermediate</h2>
+                <div class="list-group">
+                    @foreach (var lesson in Model.IntermediateLessons)
+                    {
+                        <a href="/lessons/beginner/@lesson.Slug/" class="list-group-item list-group-item-action">
+                            <h4>@lesson.Title</h4>
+                            <p>@lesson.Summary</p>
+                        </a>
+                    }
+                </div>
             </div>
             <div class="col-md-4">
                 <h2>Advanced</h2>
+                <div class="list-group">
+                    @foreach (var lesson in Model.AdvancedLessons)
+                    {
+                        <a href="/lessons/beginner/@lesson.Slug/" class="list-group-item list-group-item-action">
+                            <h4>@lesson.Title</h4>
+                            <p>@lesson.Summary</p>
+                        </a>
+                    }
+                </div>
             </div>
     </div>
 </div>

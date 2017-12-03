@@ -1,6 +1,11 @@
 body {
-    padding-top: 50px;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
     padding-bottom: 20px;
+    padding-top: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Vollkorn SC', Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Wrapping element */
@@ -10,26 +15,12 @@ body {
     padding-right: 15px;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
-}
-
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
-    width: 100%;
-}
-
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+.bg-navy {
+    background-color: #001433;
+    color: white;
 }
 
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
-    }
+
 }
