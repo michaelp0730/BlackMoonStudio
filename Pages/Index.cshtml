@@ -15,4 +15,16 @@
             @Model.Greeting
         </div>
     </div>
+    @if (Model.BeginnerLessons?.Any() == true)
+    {
+        <div class="row">
+            <div class="col">
+                @foreach(var lesson in Model.BeginnerLessons)
+                {
+                    <h3>@lesson.Title</h3>
+                    <p>@lesson.Slug</p>
+                }
+            </div>
+        </div>
+    }
 </div>
