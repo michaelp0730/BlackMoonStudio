@@ -16,42 +16,32 @@
     <div class="row">
         @if (Model.BeginnerLessons?.Any() == true)
         {
-            <div class="col-md-4">
-                <h2>Beginner</h2>
-                <div class="list-group">
-                    @foreach (var lesson in Model.BeginnerLessons)
-                    {
-                        <a href="/lessons/beginner/@lesson.Slug/" class="list-group-item list-group-item-action">
-                            <h4>@lesson.Title</h4>
-                            <p>@lesson.Summary</p>
-                        </a>
-                    }
-                </div>
-            </div>
+            @Html.Partial("Lesson", new BlackMoonStudio.Models.LessonsView
+            {
+                Title = "Beginner",
+                Path = "/lessons/beginner/",
+                Lessons = Model.BeginnerLessons
+            })
         }
-            <div class="col-md-4">
-                <h2>Intermediate</h2>
-                <div class="list-group">
-                    @foreach (var lesson in Model.IntermediateLessons)
-                    {
-                        <a href="/lessons/beginner/@lesson.Slug/" class="list-group-item list-group-item-action">
-                            <h4>@lesson.Title</h4>
-                            <p>@lesson.Summary</p>
-                        </a>
-                    }
-                </div>
-            </div>
-            <div class="col-md-4">
-                <h2>Advanced</h2>
-                <div class="list-group">
-                    @foreach (var lesson in Model.AdvancedLessons)
-                    {
-                        <a href="/lessons/beginner/@lesson.Slug/" class="list-group-item list-group-item-action">
-                            <h4>@lesson.Title</h4>
-                            <p>@lesson.Summary</p>
-                        </a>
-                    }
-                </div>
-            </div>
+
+        @if (Model.IntermediateLessons?.Any() == true)
+        {
+            @Html.Partial("Lesson", new BlackMoonStudio.Models.LessonsView
+            {
+                Title = "Intermediate",
+                Path = "/lessons/intermediate/",
+                Lessons = Model.IntermediateLessons
+            })
+        }
+
+        @if (Model.AdvancedLessons?.Any() == true)
+        {
+            @Html.Partial("Lesson", new BlackMoonStudio.Models.LessonsView
+            {
+                Title = "Advanced",
+                Path = "/lessons/advanced/",
+                Lessons = Model.AdvancedLessons
+            })
+        }
     </div>
 </div>

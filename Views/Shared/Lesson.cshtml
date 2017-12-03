@@ -1,0 +1,14 @@
+@model BlackMoonStudio.Models.LessonsView
+
+<div class="col-md-4">
+    <h2>@Model.Title</h2>
+    <div class="list-group">
+        @foreach (var lesson in Model.Lessons)
+        {
+            <a href="@string.Format("{0}{1}/", Model.Path, lesson.Slug)" class="list-group-item list-group-item-action">
+                <h4>@lesson.Title</h4>
+                <p>@lesson.Summary</p>
+            </a>
+        }
+    </div>
+</div>
