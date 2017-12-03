@@ -12,11 +12,9 @@ namespace BlackMoonStudio.Pages
 {
     public class IndexModel : PageModel
     {
-        public string Greeting { get; set; }
         public Lesson[] BeginnerLessons { get; set; }
         public void OnGetAsync()
         {
-            Greeting = "Hello World!!!";
             BeginnerLessons = GetLessons("Beginner");
         }
 
