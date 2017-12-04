@@ -5,7 +5,25 @@
         "Summary": "Unleash your inner EVH",
         "ContentKey": "",
         "Level": "Advanced",
-        "Genre": "",
+        "Genres": [],
+        "Videos": [
+            {
+                "Slug": "",
+                "Title": "",
+                "Caption": ""
+            }
+        ]
+    },
+    {
+        "Slug": "sweep-picking",
+        "Title": "Sweep Picking",
+        "Summary": "Pick fluidly through multiple strings in a single downward motion",
+        "ContentKey": "",
+        "Level": "Advanced",
+        "Genres": [
+            "Metal",
+            "Rock"
+        ],
         "Videos": [
             {
                 "Slug": "",
@@ -20,7 +38,7 @@
         "Summary": "Improve your speed and rhythm for blazing fast runs",
         "ContentKey": "",
         "Level": "Advanced",
-        "Genre": "",
+        "Genres": [],
         "Videos": [
             {
                 "Slug": "",

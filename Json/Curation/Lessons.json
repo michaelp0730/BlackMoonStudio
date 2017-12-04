@@ -3,21 +3,24 @@
         "Slug": "Beginner",
         "LessonSlugs": [
             "welcome-to-the-guitar",
-            "changing-strings"
+            "changing-strings",
+            "the-5-basic-chord-forms"
         ]
     },
     {
         "Slug": "Intermediate",
         "LessonSlugs": [
             "the-caged-system",
-            "pentatonic-lead-patterns"
+            "pentatonic-lead-patterns",
+            "pinch-harmonics"
         ]
     },
     {
         "Slug": "Advanced",
         "LessonSlugs": [
             "tapping",
-            "tremolo-picking"
+            "tremolo-picking",
+            "sweep-picking"
         ]
     }
 ]

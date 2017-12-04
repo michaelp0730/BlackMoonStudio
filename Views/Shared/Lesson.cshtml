@@ -1,4 +1,4 @@
-@model BlackMoonStudio.Models.LessonsView
+@model BlackMoonStudio.Models.LessonsViewModel
 
 <div class="col-md-4">
     <h2>@Model.Title</h2>
@@ -11,4 +11,5 @@
             </a>
         }
     </div>
+    <a href="@Model.Path" class="arrow-link lessons-see-all">See all @Model.Title lessons</a>
 </div>

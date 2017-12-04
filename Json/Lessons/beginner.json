@@ -5,7 +5,26 @@
         "Summary": "Something every guitar player needs to be comfortable with, regardless of level",
         "ContentKey": "",
         "Level": "Beginner",
-        "Genre": "",
+        "Genres": [],
+        "Videos": [
+            {
+                "Slug": "",
+                "Title": "",
+                "Caption": ""
+            }
+        ]
+    },
+    {
+        "Slug": "the-5-basic-chord-forms",
+        "Title": "The 5 Basic Chord Forms",
+        "Summary": "Cowboy Chords! A right of passage for any new player",
+        "ContentKey": "",
+        "Level": "Beginner",
+        "Genres": [
+            "Blues",
+            "Folk",
+            "Rock"
+        ],
         "Videos": [
             {
                 "Slug": "",
@@ -20,7 +39,7 @@
         "Summary": "Explanation of basic parts of a guitar, including string names and tuning",
         "ContentKey": "",
         "Level": "Beginner",
-        "Genre": "",
+        "Genres": [],
         "Videos": [
             {
                 "Slug": "",

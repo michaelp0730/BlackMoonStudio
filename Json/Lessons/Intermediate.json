@@ -5,7 +5,25 @@
         "Summary": "Learn common patterns for soloing across all strings, along the entire lenght of the fretboard",
         "ContentKey": "",
         "Level": "Intermediate",
-        "Genre": "",
+        "Genres": [],
+        "Videos": [
+            {
+                "Slug": "",
+                "Title": "",
+                "Caption": ""
+            }
+        ]
+    },
+    {
+        "Slug": "pinch-harmonics",
+        "Title": "Pinch Harmonics",
+        "Summary": "Squeal like a pig, and make Uncle Zakk Wylde proud!",
+        "ContentKey": "",
+        "Level": "Intermediate",
+        "Genres": [
+            "Metal",
+            "Rock"
+        ],
         "Videos": [
             {
                 "Slug": "",
@@ -20,7 +38,7 @@
         "Summary": "Roadmap to the fretboard",
         "ContentKey": "",
         "Level": "Intermediate",
-        "Genre": "",
+        "Genres": [],
         "Videos": [
             {
                 "Slug": "",
