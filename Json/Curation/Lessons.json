@@ -1,9 +1,23 @@
 [
     {
         "Slug": "Beginner",
-        "Lessons": [
+        "LessonSlugs": [
             "welcome-to-the-guitar",
             "changing-strings"
+        ]
+    },
+    {
+        "Slug": "Intermediate",
+        "LessonSlugs": [
+            "the-caged-system",
+            "pentatonic-lead-patterns"
+        ]
+    },
+    {
+        "Slug": "Advanced",
+        "LessonSlugs": [
+            "tapping",
+            "tremolo-picking"
         ]
     }
 ]
