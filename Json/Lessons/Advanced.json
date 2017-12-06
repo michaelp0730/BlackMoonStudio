@@ -5,6 +5,7 @@
         "Summary": "Unleash your inner EVH",
         "ContentKey": "",
         "Level": "Advanced",
+        "Stage": 1,
         "Genres": [],
         "Videos": [
             {
@@ -12,7 +13,8 @@
                 "Title": "",
                 "Caption": ""
             }
-        ]
+        ],
+        "RelatedLessonSlugs": []
     },
     {
         "Slug": "sweep-picking",
@@ -20,6 +22,7 @@
         "Summary": "Pick fluidly through multiple strings in a single downward motion",
         "ContentKey": "",
         "Level": "Advanced",
+        "Stage": 3,
         "Genres": [
             "Metal",
             "Rock"
@@ -30,7 +33,8 @@
                 "Title": "",
                 "Caption": ""
             }
-        ]
+        ],
+        "RelatedLessonSlugs": []
     },
     {
         "Slug": "tremolo-picking",
@@ -38,6 +42,7 @@
         "Summary": "Improve your speed and rhythm for blazing fast runs",
         "ContentKey": "",
         "Level": "Advanced",
+        "Stage": 2,
         "Genres": [],
         "Videos": [
             {
@@ -45,6 +50,7 @@
                 "Title": "",
                 "Caption": ""
             }
-        ]
+        ],
+        "RelatedLessonSlugs": []
     }
 ]
