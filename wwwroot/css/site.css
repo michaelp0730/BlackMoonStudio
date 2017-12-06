@@ -39,6 +39,14 @@ h1, h2, h3, h4, h5, h6 {
     left: -13px;
 }
 
+footer.main {
+    border-top: 1px solid #DDD;
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+}
+
 /* Hide/rearrange for smaller screens */
 @media screen and (max-width: 767px) {
 
