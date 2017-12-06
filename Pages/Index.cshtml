@@ -44,4 +44,12 @@
             })
         }
     </div>
+    <div class="row">
+        <div class="col">
+            @foreach (var content in Model.BeginnerContents)
+            {
+                <p>@content.Key - @Html.Raw(content.Text)</p>
+            }
+        </div>
+    </div>
 </div>

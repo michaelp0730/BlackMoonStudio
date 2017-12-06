@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<LessonContents xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Contents>
+        <Content>
+            <Key>WelcomeToTheGuitar</Key>
+            <Text>
+                <![CDATA[
+                    <p>Welcome to the guitar!</p>
+                    <p>Another line of text!</p>
+                    <p>Plus, a <a href="/lessons/beginner/">link!</a></p>
+                ]]>
+            </Text>
+        </Content>
+        <Content>
+            <Key>ChangingStrings</Key>
+            <Text>Some text on changing strings</Text>
+        </Content>
+    </Contents>
+</LessonContents>
