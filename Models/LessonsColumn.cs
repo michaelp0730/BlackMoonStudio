@@ -1,6 +1,6 @@
 namespace BlackMoonStudio.Models
 {
-    public class LessonsViewModel
+    public class LessonsColumn
     {
         public string Title { get; set; }
         public string Path { get; set; }

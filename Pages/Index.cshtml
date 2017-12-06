@@ -16,7 +16,7 @@
     <div class="row">
         @if (Model.BeginnerLessons?.Any() == true)
         {
-            @Html.Partial("Lesson", new BlackMoonStudio.Models.LessonsViewModel
+            @Html.Partial("LessonsColumn", new BlackMoonStudio.Models.LessonsColumn
             {
                 Title = "Beginner",
                 Path = "/lessons/beginner/",
@@ -26,7 +26,7 @@
 
         @if (Model.IntermediateLessons?.Any() == true)
         {
-            @Html.Partial("Lesson", new BlackMoonStudio.Models.LessonsViewModel
+            @Html.Partial("LessonsColumn", new BlackMoonStudio.Models.LessonsColumn
             {
                 Title = "Intermediate",
                 Path = "/lessons/intermediate/",
@@ -36,20 +36,12 @@
 
         @if (Model.AdvancedLessons?.Any() == true)
         {
-            @Html.Partial("Lesson", new BlackMoonStudio.Models.LessonsViewModel
+            @Html.Partial("LessonsColumn", new BlackMoonStudio.Models.LessonsColumn
             {
                 Title = "Advanced",
                 Path = "/lessons/advanced/",
                 Lessons = Model.AdvancedLessons
             })
         }
-    </div>
-    <div class="row">
-        <div class="col">
-            @foreach (var content in Model.BeginnerContents)
-            {
-                <p>@content.Key - @Html.Raw(content.Text)</p>
-            }
-        </div>
     </div>
 </div>

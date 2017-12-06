@@ -24,10 +24,12 @@ namespace BlackMoonStudio.Controllers
 
             var lessonsCuration = lesson.GetCurationList("Lessons");
             var beginnerCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
-            var viewModel = beginnerLessons.OrderBy(x => 
-                { return Array.IndexOf(beginnerCuration.LessonSlugs, x.Slug); } );
-
-            return View("Pages/lessons/beginner.cshtml", viewModel.ToArray());
+            return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
+            {
+                Heading = "Beginner Guitar Lessons",
+                Lessons = beginnerLessons.OrderBy(x => 
+                    { return Array.IndexOf(beginnerCuration.LessonSlugs, x.Slug); } ).ToArray(),
+            });
         }
     }
 }
