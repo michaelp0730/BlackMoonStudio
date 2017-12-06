@@ -11,13 +11,23 @@ namespace BlackMoonStudio.Controllers
 {
     public class LessonsController : Controller
     {
-        [HttpGet("lessons/beginner/{slug}/")]
+        [HttpGet("lessons/beginner/{slug?}/")]
         public IActionResult GetBeginnerLesson(string slug)
         {
             var lesson = new Lesson();
             var beginnerLessons = lesson.GetLessons("Beginner");
-            lesson = beginnerLessons.Where(x => x.Slug == slug).FirstOrDefault();
-            return View("LessonDetails", lesson); 
+            if (!string.IsNullOrEmpty(slug))
+            {
+                lesson = beginnerLessons.FirstOrDefault(x => x.Slug == slug);
+                return View("Pages/lessons/_details.cshtml", lesson);
+            }
+
+            var lessonsCuration = lesson.GetCurationList("Lessons");
+            var beginnerCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
+            var viewModel = beginnerLessons.OrderBy(x => 
+                { return Array.IndexOf(beginnerCuration.LessonSlugs, x.Slug); } );
+
+            return View("Pages/lessons/beginner.cshtml", viewModel.ToArray());
         }
     }
 }
