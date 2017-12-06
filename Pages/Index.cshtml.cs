@@ -19,6 +19,7 @@ namespace BlackMoonStudio.Pages
         public Lesson[] AdvancedLessons { get; set; }
         public void OnGetAsync()
         {
+            var lesson = new Lesson();
             LessonContents beginnerContents;
             var beginnerContentsSerializer = new XmlSerializer(typeof(LessonContents));
             var beginnerContentsFileStream = new FileStream("Xml/Lessons/Beginner.xml", FileMode.Open);
@@ -26,45 +27,21 @@ namespace BlackMoonStudio.Pages
             beginnerContents = (LessonContents)beginnerContentsSerializer.Deserialize(beginnerContentsFileStream);
             beginnerContentsFileStream.Dispose();
 
-            var lessonsCuration = GetCurationList("Lessons");
+            var lessonsCuration = lesson.GetCurationList("Lessons");
             var beginnerCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
             var intermediateCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Intermediate");
             var advancedCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Advanced");
 
-            BeginnerLessons = GetLessons("Beginner").OrderBy(x => 
+            BeginnerLessons = lesson.GetLessons("Beginner").OrderBy(x => 
                 { return Array.IndexOf(beginnerCuration.LessonSlugs, x.Slug); } ).ToArray();
 
             BeginnerContents = beginnerContents.Contents;
 
-            IntermediateLessons = GetLessons("Intermediate").OrderBy(x => 
+            IntermediateLessons = lesson.GetLessons("Intermediate").OrderBy(x => 
                 { return Array.IndexOf(intermediateCuration.LessonSlugs, x.Slug); } ).ToArray();
 
-            AdvancedLessons = GetLessons("Advanced").OrderBy(x => 
+            AdvancedLessons = lesson.GetLessons("Advanced").OrderBy(x => 
                 { return Array.IndexOf(advancedCuration.LessonSlugs, x.Slug); } ).ToArray();
-        }
-
-        private List<Lesson> GetLessons(string level)
-        {
-            var lessonList = new List<Lesson>();
-
-            using (StreamReader sr = new StreamReader(path: $"Json/Lessons/{level}.json"))
-            {
-                lessonList = JsonConvert.DeserializeObject<List<Lesson>>(sr.ReadToEnd());
-            }
-
-            return lessonList;
-        }
-
-        private List<Curation> GetCurationList(string list)
-        {
-            var curationList = new List<Curation>();
-
-            using (StreamReader sr = new StreamReader(path: $"Json/Curation/{list}.json"))
-            {
-                curationList = JsonConvert.DeserializeObject<List<Curation>>(sr.ReadToEnd());
-            }
-
-            return curationList;
         }
     }
 }
