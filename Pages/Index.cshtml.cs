@@ -20,9 +20,12 @@ namespace BlackMoonStudio.Pages
         public void OnGetAsync()
         {
             LessonContents beginnerContents;
-            XmlSerializer beginnerContentsSerializer = new XmlSerializer(typeof(LessonContents));
-            FileStream beginnerContentsFileStream = new FileStream("Xml/Lessons/Beginner.xml", FileMode.Open);
+            var beginnerContentsSerializer = new XmlSerializer(typeof(LessonContents));
+            var beginnerContentsFileStream = new FileStream("Xml/Lessons/Beginner.xml", FileMode.Open);
+
             beginnerContents = (LessonContents)beginnerContentsSerializer.Deserialize(beginnerContentsFileStream);
+            beginnerContentsFileStream.Dispose();
+
             var lessonsCuration = GetCurationList("Lessons");
             var beginnerCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
             var intermediateCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Intermediate");
