@@ -36,7 +36,6 @@ namespace BlackMoonStudio.Controllers
                         Lessons = lessonList.OrderBy(x => 
                             { return Array.IndexOf(curation.LessonSlugs, x.Slug); } ).ToArray(),
                     });
-                    break;
                 case "intermediate":
                     lessonList = lesson.GetLessons("Intermediate");
                     if (!string.IsNullOrEmpty(slug))
@@ -53,7 +52,6 @@ namespace BlackMoonStudio.Controllers
                         Lessons = lessonList.OrderBy(x => 
                             { return Array.IndexOf(curation.LessonSlugs, x.Slug); } ).ToArray(),
                     });
-                    break;
                 default:
                     lessonList = lesson.GetLessons("Beginner");
                     if (!string.IsNullOrEmpty(slug))
@@ -70,7 +68,6 @@ namespace BlackMoonStudio.Controllers
                         Lessons = lessonList.OrderBy(x => 
                             { return Array.IndexOf(curation.LessonSlugs, x.Slug); } ).ToArray(),
                     });
-                    break;
             }
         }
     }
