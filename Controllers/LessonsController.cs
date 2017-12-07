@@ -15,55 +15,60 @@ namespace BlackMoonStudio.Controllers
         public IActionResult GetLessons(string category, string slug)
         {
             var lesson = new Lesson();
+            var lessonList = new List<Lesson>();
+            var curation = new Curation();
             var lessonsCuration = lesson.GetCurationList("Lessons");
             switch (category)
             {
                 case "advanced":
-                    var advancedLessons = lesson.GetLessons("Advanced");
+                    lessonList = lesson.GetLessons("Advanced");
                     if (!string.IsNullOrEmpty(slug))
                     {
-                        lesson = advancedLessons.FirstOrDefault(x => x.Slug == slug);
+                        lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
                         return View("Pages/lessons/_details.cshtml", lesson);
                     }
 
-                    var advancedCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Advanced");
+                    curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Advanced");
                     return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
                     {
                         Heading = "Advanced Guitar Lessons",
-                        Lessons = advancedLessons.OrderBy(x => 
-                            { return Array.IndexOf(advancedCuration.LessonSlugs, x.Slug); } ).ToArray(),
+                        Summary = "Time to take your game to a whole new level. The advanced lessons are more focused on techniques than anything else. Be prepared to practice - a lot - as these techniques require significant muscle memory, and rhythm. As always, you'll be better off if you practice with a metronome.",
+                        Lessons = lessonList.OrderBy(x => 
+                            { return Array.IndexOf(curation.LessonSlugs, x.Slug); } ).ToArray(),
                     });
                     break;
                 case "intermediate":
-                    var intermediateLessons = lesson.GetLessons("Intermediate");
+                    lessonList = lesson.GetLessons("Intermediate");
                     if (!string.IsNullOrEmpty(slug))
                     {
-                        lesson = intermediateLessons.FirstOrDefault(x => x.Slug == slug);
+                        lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
                         return View("Pages/lessons/_details.cshtml", lesson);
                     }
 
-                    var intermediateCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Intermediate");
+                    curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Intermediate");
                     return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
                     {
                         Heading = "Intermediate Guitar Lessons",
-                        Lessons = intermediateLessons.OrderBy(x => 
-                            { return Array.IndexOf(intermediateCuration.LessonSlugs, x.Slug); } ).ToArray(),
+                        Summary = "Time to take the basic concepts from the Beginner category and start learning lots of fun new stuff. Soon you will feel comfortable playing leads and solos in any key, anywhere on the neck. Your understanding of music theory, and your comfort level navigating the fretboard, are about to grow significantly. Let's get started!",
+                        Lessons = lessonList.OrderBy(x => 
+                            { return Array.IndexOf(curation.LessonSlugs, x.Slug); } ).ToArray(),
                     });
                     break;
                 default:
-                    var beginnerLessons = lesson.GetLessons("Beginner");
+                    lessonList = lesson.GetLessons("Beginner");
                     if (!string.IsNullOrEmpty(slug))
                     {
-                        lesson = beginnerLessons.FirstOrDefault(x => x.Slug == slug);
+                        lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
                         return View("Pages/lessons/_details.cshtml", lesson);
                     }
 
-                    var beginnerCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
+                    curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
                     return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
                     {
                         Heading = "Beginner Guitar Lessons",
-                        Lessons = beginnerLessons.OrderBy(x => 
-                            { return Array.IndexOf(beginnerCuration.LessonSlugs, x.Slug); } ).ToArray(),
+                        Summary = "These lessons will take the absolute beginner to a point where they are ready to start exploring various playing techniques, and genre-specific licks. Like all categories, the lessons are broken down into 3 stages, so you can think of the stages as mini categories.",
+                        Lessons = lessonList.OrderBy(x => 
+                            { return Array.IndexOf(curation.LessonSlugs, x.Slug); } ).ToArray(),
                     });
                     break;
             }
