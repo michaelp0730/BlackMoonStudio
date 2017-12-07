@@ -1,4 +1,5 @@
 @model BlackMoonStudio.Models.LessonCategoryIndex
+@using BlackMoonStudio.Models
 @{
     Layout = "~/Pages/_Layout.cshtml";
     ViewData["Title"] = Model.Heading;
@@ -19,7 +20,7 @@
             @Html.Partial("LessonsColumn", new BlackMoonStudio.Models.LessonsColumn
             {
                 Title = "Stage 1",
-                Path = "/lessons/beginner/",
+                Path = Model.Path,
                 Lessons = stage1Lessons.ToArray(),
             })
         }
@@ -29,7 +30,7 @@
             @Html.Partial("LessonsColumn", new BlackMoonStudio.Models.LessonsColumn
             {
                 Title = "Stage 2",
-                Path = "/lessons/beginner/",
+                Path = Model.Path,
                 Lessons = stage2Lessons.ToArray(),
             })
         }
@@ -39,8 +40,8 @@
             @Html.Partial("LessonsColumn", new BlackMoonStudio.Models.LessonsColumn
             {
                 Title = "Stage 3",
-                Path = "/lessons/beginner/",
-                Lessons = stage1Lessons.ToArray(),
+                Path = Model.Path,
+                Lessons = stage3Lessons.ToArray(),
             })
         }
     </div>
