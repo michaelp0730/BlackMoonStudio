@@ -11,5 +11,8 @@
             </a>
         }
     </div>
-    <a href="@Model.Path" class="arrow-link lessons-see-all">See all @Model.Title lessons</a>
+    @if (Model.ShowSeeAllLink)
+    {
+        <a href="@Model.Path" class="arrow-link lessons-see-all">See all @Model.Title lessons</a>
+    }
 </div>

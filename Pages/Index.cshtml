@@ -5,7 +5,7 @@
 }
 
 <div class="container-fluid">
-    <div class="row bg-navy bg-logo">
+    <div class="row bg-logo">
         <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <h1>Free Guitar Lessons</h1>
             <p>Welcome to BlackMoonStudio! We're committed to providing you a curated course of free, high&ndash;quality guitar lessons. Basically, for each lesson, we write the content, then present a series of related videos and articles to help further explain the topic of that lesson.</p>
@@ -20,7 +20,8 @@
             {
                 Title = "Beginner",
                 Path = "/lessons/beginner/",
-                Lessons = Model.BeginnerLessons
+                Lessons = Model.BeginnerLessons,
+                ShowSeeAllLink = true,
             })
         }
 
@@ -30,7 +31,8 @@
             {
                 Title = "Intermediate",
                 Path = "/lessons/intermediate/",
-                Lessons = Model.IntermediateLessons
+                Lessons = Model.IntermediateLessons,
+                ShowSeeAllLink = true,
             })
         }
 
@@ -40,7 +42,8 @@
             {
                 Title = "Advanced",
                 Path = "/lessons/advanced/",
-                Lessons = Model.AdvancedLessons
+                Lessons = Model.AdvancedLessons,
+                ShowSeeAllLink = true,
             })
         }
     </div>

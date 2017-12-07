@@ -1,21 +1,47 @@
 @model BlackMoonStudio.Models.LessonCategoryIndex
 @{
     Layout = "~/Pages/_Layout.cshtml";
+    ViewData["Title"] = Model.Heading;
+    var stage1Lessons = Model.Lessons.Where(x => x.Stage == 1);
+    var stage2Lessons = Model.Lessons.Where(x => x.Stage == 2);
+    var stage3Lessons = Model.Lessons.Where(x => x.Stage == 3);
 }
 <div class="container-fluid">
-    <div class="row">
-        <div class="col">
+    <div class="row bg-logo">
+        <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <h1>@Model.Heading</h1>
             <p>@Model.Summary</p>
         </div>
     </div>
     <div class="row">
-        <div class="col">
-            @foreach (var lesson in Model.Lessons)
+        @if (stage1Lessons.Any() == true)
+        {
+            @Html.Partial("LessonsColumn", new BlackMoonStudio.Models.LessonsColumn
             {
-                <h2>@lesson.Title</h2>
-                <p>@lesson.Summary</p>
-            }
-        </div>
+                Title = "Stage 1",
+                Path = "/lessons/beginner/",
+                Lessons = stage1Lessons.ToArray(),
+            })
+        }
+
+        @if (stage2Lessons.Any() == true)
+        {
+            @Html.Partial("LessonsColumn", new BlackMoonStudio.Models.LessonsColumn
+            {
+                Title = "Stage 2",
+                Path = "/lessons/beginner/",
+                Lessons = stage2Lessons.ToArray(),
+            })
+        }
+
+        @if (stage3Lessons.Any() == true)
+        {
+            @Html.Partial("LessonsColumn", new BlackMoonStudio.Models.LessonsColumn
+            {
+                Title = "Stage 3",
+                Path = "/lessons/beginner/",
+                Lessons = stage1Lessons.ToArray(),
+            })
+        }
     </div>
 </div>
