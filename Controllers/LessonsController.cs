@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using BlackMoonStudio.Models;
@@ -18,6 +19,10 @@ namespace BlackMoonStudio.Controllers
             var lessonList = new List<Lesson>();
             var curation = new Curation();
             var lessonsCuration = lesson.GetCurationList("Lessons");
+            var lessonContentsSerializer = new XmlSerializer(typeof(LessonContents));
+            LessonContents lessonContents;
+            FileStream fileStream;
+
             switch (category)
             {
                 case "advanced":
@@ -61,6 +66,10 @@ namespace BlackMoonStudio.Controllers
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
+                        fileStream = new FileStream("Xml/Lessons/Beginner.xml", FileMode.Open);
+                        lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
+                        fileStream.Dispose();
+                        lesson.Content = lessonContents.Contents.FirstOrDefault(x => x.Key == lesson.ContentKey);
                         return View("Pages/lessons/_details.cshtml", lesson);
                     }
 

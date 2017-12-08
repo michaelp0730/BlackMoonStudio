@@ -1,13 +1,11 @@
 using System;
+using BlackMoonStudio.Models;
 using Microsoft.AspNetCore.Html;
 
-public class LessonContents
+namespace BlackMoonStudio.Models
 {
-    public Content[] Contents { get; set; }
-}
-
-public class Content
-{
-    public string Key { get; set; }
-    public string Text { get; set; }
+    public class LessonContents
+    {
+        public Content[] Contents { get; set; }
+    }
 }
