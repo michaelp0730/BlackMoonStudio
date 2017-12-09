@@ -67,6 +67,38 @@
                 "Caption": "Here's one more comprehensive look at affordable options for getting started on the electric guitar. The main point to get here is that there are plenty of options for getting started, and the quality of these beginner guitars is better today than it was for previous generations of beginning players (except those that were starting in the 50's and 60's). Anything you see here should be considered a viable option for getting started on the guitar."
             }
         ],
+        "Articles": [
+            {
+                "Title": "8 tips on how to buy your first electric guitar",
+                "Caption": "Another beginners buying guide, although this one is different from the others in this lesson. This isn't about comparing specific guitars, but instead is more of a general checklist to keep in mind when making your purchasing decision. A quick easy read that you should definitely check out.",
+                "Url": "https://www.theguitarlesson.com/guitar-lesson-blog/guitar-gear/buy-first-guitar/"
+            },
+            {
+                "Title": "Electric Guitar vs. Acoustic Guitar - Which is Better for Beginners?",
+                "Caption": "If you're not sure which type of guitar you want to get started on, then this article is for you. Here you'll find pros and cons for starting on acoustic versus electric. Just remember, you can always play both, so don't worry about which one you start out on. It's just the first step of a (hopefully) long journey.",
+                "Url": "https://www.theguitarlesson.com/guitar-lesson-blog/guitar-gear/electric-guitar-vs-acoustic-guitar-which-is-better-for-beginners/"
+            },
+            {
+                "Title": "Parts of an Electric Guitar",
+                "Caption": "A nice breakdown of the parts of an electric guitar. Intended for the beginning player, this article explains everything you need to know about the components found on an electric guitar.",
+                "Url": "http://www.dummies.com/art-center/music/guitar/parts-of-an-electric-guitar/"
+            },
+            {
+                "Title": "For Those About to Rock: 10 Beginner FAQs",
+                "Caption": "Fender provides answers to 10 common questions asked by beginning guitar players, or those who are interested in getting started but haven't committed quite yet.",
+                "Url": "https://www.fender.com/articles/how-to/for-those-about-to-rock-10-beginner-faqs"
+            },
+            {
+                "Title": "What Is The Best Beginner Electric Guitar? Ultimate Buying Guide To Your First Instrument!",
+                "Caption": "Guitar Fella breaks down their top list of guitars for beginners. Plenty of great options to consider in here.",
+                "Url": "https://www.guitarfella.com/best-electric-guitar/beginners/"
+            },
+            {
+                "Title": "10 Essential Principles for Learning Guitar",
+                "Caption": "A nice collection of tips to keep in mind when learning to play the guitar. The advice you'll find in this article should stick with you for your entire playing career, as these are principles you never grow out of.",
+                "Url": "https://music.tutsplus.com/articles/10-essential-principles-for-learning-guitar--audio-6414"
+            }
+        ],
         "RelatedLessonSlugs": []
     }
 ]

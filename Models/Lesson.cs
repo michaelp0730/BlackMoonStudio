@@ -17,6 +17,7 @@ namespace BlackMoonStudio.Models
         public int Stage { get; set; }
         public string[] Genres { get; set; }
         public IEnumerable<Video> Videos { get; set; }
+        public Article[] Articles { get; set; }
         public string[] RelatedLessonSlugs { get; set; }
 
         public List<Lesson> GetLessons(string level)

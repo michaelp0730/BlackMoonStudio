@@ -3,6 +3,7 @@
 @{
     Layout = "~/Pages/_Layout.cshtml";
     ViewData["Title"] = Model.Title;
+    var articleCount = Model.Articles?.Count();
 }
 
 <div class="container-fluid">
@@ -17,11 +18,13 @@
             @Html.Raw(Model.Content.Text)
         </div>
     </div>
+
     @if (Model.Videos?.Any() == true)
     {
         <div class="row">
-            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 border-bottom-gray">
-                <h2 class="text-center">Videos</h2>
+            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 border-bottom-gray text-center">
+                <h2>Videos</h2>
+                <p>Check out the following YouTube videos to better understand the concepts for this lesson</p>
             </div>
         </div>
         <div class="videos-container">
@@ -34,6 +37,29 @@
                     </div>
                     <div class="col-lg-6">
                         <iframe width="560" height="315" src="@($"https://www.youtube.com/embed/{video.Slug}")" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+
+    @if (articleCount > 0)
+    {
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 border-bottom-gray text-center">
+                <h2 class="text-center">Articles</h2>
+                <p>Expand your knowledge of the concepts from this lesson by reading the following articles</p>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var article in Model.Articles)
+            {
+                <div class="list-group">
+                    <div class="col-md-4">
+                        <a href="@article.Url" class="list-group-item list-group-item-action">
+                            <h4>@article.Title</h4>
+                            <p>@article.Caption</p>
+                        </a>
                     </div>
                 </div>
             }
