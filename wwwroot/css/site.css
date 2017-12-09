@@ -19,6 +19,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 12px 0;
 }
 
+.row.row-size2 {
+    padding: 24px 0;
+}
+
 .bg-navy {
     background-color: #001433;
     color: white;
@@ -32,6 +36,10 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
     display: flex;
     min-height: 260px;
+}
+
+.border-bottom-gray {
+    border-bottom: 1px solid #CCC;
 }
 
 .arrow-link {
@@ -51,6 +59,10 @@ h1, h2, h3, h4, h5, h6 {
 .lessons-see-all {
     float: right;
     left: -13px;
+}
+
+.videos-container .row.border-bottom-gray:last-child {
+    border: none;
 }
 
 footer.main {

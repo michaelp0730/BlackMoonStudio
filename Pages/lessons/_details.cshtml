@@ -1,4 +1,5 @@
 @model BlackMoonStudio.Models.Lesson
+@using Microsoft.AspNetCore.Html;
 @{
     Layout = "~/Pages/_Layout.cshtml";
     ViewData["Title"] = Model.Title;
@@ -16,4 +17,26 @@
             @Html.Raw(Model.Content.Text)
         </div>
     </div>
+    @if (Model.Videos?.Any() == true)
+    {
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 border-bottom-gray">
+                <h2 class="text-center">Videos</h2>
+            </div>
+        </div>
+        <div class="videos-container">
+            @foreach (var video in Model.Videos)
+            {
+                <div class="row row-size2 border-bottom-gray">
+                    <div class="col-lg-6">
+                        <h3>@video.Title</h3>
+                        <p>@video.Caption</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <iframe width="560" height="315" src="@($"https://www.youtube.com/embed/{video.Slug}")" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+            }
+        </div>
+    }
 </div>
