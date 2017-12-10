@@ -1,9 +1,50 @@
 @model BlackMoonStudio.Models.Lesson
-@using Microsoft.AspNetCore.Html;
+@using BlackMoonStudio.Models
+@using Microsoft.AspNetCore.Html
+@using System
+@using System.Collections.Generic
 @{
     Layout = "~/Pages/_Layout.cshtml";
     ViewData["Title"] = Model.Title;
-    var articleCount = Model.Articles?.Count();
+    var allArticles = Model.Articles;
+    var articleCount = allArticles?.Count();
+    List<Article> articlesColumn1 = new List<Article>();
+    List<Article> articlesColumn2 = new List<Article>();
+    List<Article> articlesColumn3 = new List<Article>();
+    if (articleCount == 1)
+    {
+        articlesColumn1.Add(allArticles.First());
+    }
+    else if (articleCount == 2)
+    {
+        articlesColumn1.Add(allArticles.First());
+        articlesColumn2.Add(allArticles.Last());
+    }
+    else
+    {
+        /*
+        //var quotient = Math.Ceiling(articleCount / 3);
+        var foo = 2;
+        articlesColumn1.Add(allArticles.Take(foo));
+        articlesColumn2.Add(allArticles.Skip(foo).Take(foo));
+        articlesColumn3.Add(allArticles.Skip (foo * 2).Take(foo));
+        */
+        var foo = 2;
+        for (var i = 0; i < foo; i++)
+        {
+            articlesColumn1.Add(allArticles[i]);
+        }
+
+        for (var n = foo; n < foo * 2; n++)
+        {
+            articlesColumn2.Add(allArticles[n]);
+        }
+
+        for (var x = foo * 2; x < foo * 3; x++)
+        {
+            articlesColumn3.Add(allArticles[x]);
+        }
+    }
 }
 
 <div class="container-fluid">
@@ -52,17 +93,41 @@
             </div>
         </div>
         <div class="row">
-            @foreach (var article in Model.Articles)
-            {
+            <div class="col-md-4">
                 <div class="list-group">
-                    <div class="col-md-4">
+                    @foreach (var article in articlesColumn1)
+                    {
                         <a href="@article.Url" class="list-group-item list-group-item-action">
                             <h4>@article.Title</h4>
                             <p>@article.Caption</p>
                         </a>
-                    </div>
+                    }
                 </div>
-            }
+            </div>
+
+            <div class="col-md-4">
+                <div class="list-group">
+                    @foreach (var article in articlesColumn2)
+                    {
+                        <a href="@article.Url" class="list-group-item list-group-item-action">
+                            <h4>@article.Title</h4>
+                            <p>@article.Caption</p>
+                        </a>
+                    }
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="list-group">
+                    @foreach (var article in articlesColumn3)
+                    {
+                        <a href="@article.Url" class="list-group-item list-group-item-action">
+                            <h4>@article.Title</h4>
+                            <p>@article.Caption</p>
+                        </a>
+                    }
+                </div>
+            </div>
         </div>
     }
 </div>
