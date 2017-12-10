@@ -93,41 +93,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="list-group">
-                    @foreach (var article in articlesColumn1)
-                    {
-                        <a href="@article.Url" class="list-group-item list-group-item-action">
-                            <h4>@article.Title</h4>
-                            <p>@article.Caption</p>
-                        </a>
-                    }
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="list-group">
-                    @foreach (var article in articlesColumn2)
-                    {
-                        <a href="@article.Url" class="list-group-item list-group-item-action">
-                            <h4>@article.Title</h4>
-                            <p>@article.Caption</p>
-                        </a>
-                    }
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="list-group">
-                    @foreach (var article in articlesColumn3)
-                    {
-                        <a href="@article.Url" class="list-group-item list-group-item-action">
-                            <h4>@article.Title</h4>
-                            <p>@article.Caption</p>
-                        </a>
-                    }
-                </div>
-            </div>
+            @Html.Partial("ArticlesColumn", articlesColumn1.ToArray())
+            @Html.Partial("ArticlesColumn", articlesColumn2.ToArray())
+            @Html.Partial("ArticlesColumn", articlesColumn3.ToArray())
         </div>
     }
 </div>
