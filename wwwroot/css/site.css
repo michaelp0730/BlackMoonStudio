@@ -59,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 .lessons-see-all {
     float: right;
     left: -13px;
+    margin-bottom: 20px;
 }
 
 .videos-container .row.border-bottom-gray:last-child {
