@@ -12524,11 +12524,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\github\\BlackMoonStudio\\BlackMoonStudio.csproj",
+      "projectUniqueName": "C:\\github\\BlackMoonStudio\\BlackMoonStudio.csproj",
       "projectName": "BlackMoonStudio",
-      "projectPath": "c:\\github\\BlackMoonStudio\\BlackMoonStudio.csproj",
+      "projectPath": "C:\\github\\BlackMoonStudio\\BlackMoonStudio.csproj",
       "packagesPath": "C:\\Users\\mipelleg\\.nuget\\packages\\",
-      "outputPath": "c:\\github\\BlackMoonStudio\\obj\\",
+      "outputPath": "C:\\github\\BlackMoonStudio\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

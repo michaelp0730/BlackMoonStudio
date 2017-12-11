@@ -2,6 +2,7 @@
 @using BlackMoonStudio.Models
 @using Microsoft.AspNetCore.Html
 @using System
+@using System.Linq
 @using System.Collections.Generic
 @{
     Layout = "~/Pages/_Layout.cshtml";
@@ -26,20 +27,9 @@
         else
         {
             var quotient = Math.Ceiling((double)articleCount / 3);
-            for (var i = 0; i < quotient; i++)
-            {
-                articlesColumn1.Add(allArticles[i]);
-            }
-
-            for (var n = (int)quotient; n < (int)quotient * 2; n++)
-            {
-                articlesColumn2.Add(allArticles[n]);
-            }
-
-            for (var x = (int)quotient * 2; x < (int)quotient * 3; x++)
-            {
-                articlesColumn3.Add(allArticles[x]);
-            }
+            articlesColumn1 = allArticles.Take((int)quotient).ToList();
+            articlesColumn2 = allArticles.Skip((int)quotient).Take((int)quotient).ToList();
+            articlesColumn3 = allArticles.Skip((int)quotient * 2).ToList();
         }
     }
 }
@@ -51,11 +41,14 @@
             <p><em>@Model.Summary</em></p>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
-            @Html.Raw(Model.Content.Text)
+    @if (Model.Content?.Text != null)
+    {
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+                @Html.Raw(Model.Content.Text)
+            </div>
         </div>
-    </div>
+    }
 
     @if (Model.Videos?.Any() == true)
     {
