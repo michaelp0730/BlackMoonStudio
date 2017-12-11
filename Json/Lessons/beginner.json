@@ -14,6 +14,13 @@
                 "Caption": ""
             }
         ],
+        "Articles": [
+            {
+                "Title": "A single article test",
+                "Caption": "Just testing this out with a single article",
+                "Url": "https://reverb.com"
+            }
+        ],
         "RelatedLessonSlugs": []
     },
     {
@@ -33,6 +40,18 @@
                 "Slug": "",
                 "Title": "",
                 "Caption": ""
+            }
+        ],
+        "Articles": [
+            {
+                "Title": "A double article test",
+                "Caption": "Just testing this out with two separate articles",
+                "Url": "https://google.com"
+            },
+            {
+                "Title": "Part of the double article test",
+                "Caption": "Gotta have a second article for a two article test",
+                "Url": "https://google.com"
             }
         ],
         "RelatedLessonSlugs": []

@@ -14,6 +14,28 @@
                 "Caption": ""
             }
         ],
+        "Articles": [
+            {
+                "Title": "A test with four",
+                "Caption": "Testing my math when working with four articles",
+                "Url": "https://reverb.com"
+            },
+            {
+                "Title": "Part two of four",
+                "Caption": "The second of four articles to test with",
+                "Url": "https://google.com"
+            },
+            {
+                "Title": "Three quarters of this test down",
+                "Caption": "Oh yeah, almost there",
+                "Url": "https://yahoo.com"
+            },
+            {
+                "Title": "And we did it, we made it to four!",
+                "Caption": "Unbelievable, but I knew we could do it.",
+                "Url": "https://msn.com"
+            }
+        ],
         "RelatedLessonSlugs": []
     },
     {
