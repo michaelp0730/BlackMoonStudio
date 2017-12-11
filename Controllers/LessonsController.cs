@@ -30,7 +30,20 @@ namespace BlackMoonStudio.Controllers
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
-                        return View("Pages/lessons/_details.cshtml", lesson);
+                        var viewModel = new LessonViewModel
+                        {
+                            Slug = lesson.Slug,
+                            Title = lesson.Title,
+                            Summary = lesson.Summary,
+                            Content = lesson.Content,
+                            Level = lesson.Level,
+                            Stage = lesson.Stage,
+                            Genres = lesson.Genres,
+                            Videos = lesson.Videos,
+                            Articles = lesson.Articles,
+                            RelatedLessonSlugs = lesson.RelatedLessonSlugs,
+                        };
+                        return View("Pages/lessons/_details.cshtml", viewModel);
                     }
 
                     curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Advanced");
@@ -48,7 +61,20 @@ namespace BlackMoonStudio.Controllers
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
-                        return View("Pages/lessons/_details.cshtml", lesson);
+                        var viewModel = new LessonViewModel
+                        {
+                            Slug = lesson.Slug,
+                            Title = lesson.Title,
+                            Summary = lesson.Summary,
+                            Content = lesson.Content,
+                            Level = lesson.Level,
+                            Stage = lesson.Stage,
+                            Genres = lesson.Genres,
+                            Videos = lesson.Videos,
+                            Articles = lesson.Articles,
+                            RelatedLessonSlugs = lesson.RelatedLessonSlugs,
+                        };
+                        return View("Pages/lessons/_details.cshtml", viewModel);
                     }
 
                     curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Intermediate");
@@ -70,7 +96,20 @@ namespace BlackMoonStudio.Controllers
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
                         fileStream.Dispose();
                         lesson.Content = lessonContents.Contents.FirstOrDefault(x => x.Key == lesson.ContentKey);
-                        return View("Pages/lessons/_details.cshtml", lesson);
+                        var viewModel = new LessonViewModel
+                        {
+                            Slug = lesson.Slug,
+                            Title = lesson.Title,
+                            Summary = lesson.Summary,
+                            Content = lesson.Content,
+                            Level = lesson.Level,
+                            Stage = lesson.Stage,
+                            Genres = lesson.Genres,
+                            Videos = lesson.Videos,
+                            Articles = lesson.Articles,
+                            RelatedLessonSlugs = lesson.RelatedLessonSlugs,
+                        };
+                        return View("Pages/lessons/_details.cshtml", viewModel);
                     }
 
                     curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
