@@ -12,7 +12,6 @@ namespace BlackMoonStudio.Models
         public string Title { get; set; }
         public string Summary { get; set; }
         public string ContentKey { get; set; }
-        public Content Content { get; set; }
         public Levels Level { get; set; }
         public int Stage { get; set; }
         public string[] Genres { get; set; }

@@ -35,7 +35,6 @@ namespace BlackMoonStudio.Controllers
                             Slug = lesson.Slug,
                             Title = lesson.Title,
                             Summary = lesson.Summary,
-                            Content = lesson.Content,
                             Level = lesson.Level,
                             Stage = lesson.Stage,
                             Genres = lesson.Genres,
@@ -66,7 +65,6 @@ namespace BlackMoonStudio.Controllers
                             Slug = lesson.Slug,
                             Title = lesson.Title,
                             Summary = lesson.Summary,
-                            Content = lesson.Content,
                             Level = lesson.Level,
                             Stage = lesson.Stage,
                             Genres = lesson.Genres,
@@ -95,13 +93,13 @@ namespace BlackMoonStudio.Controllers
                         fileStream = new FileStream("Xml/Lessons/Beginner.xml", FileMode.Open);
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
                         fileStream.Dispose();
-                        lesson.Content = lessonContents.Contents.FirstOrDefault(x => x.Key == lesson.ContentKey);
+                        var content = lessonContents.Contents.FirstOrDefault(x => x.Key == lesson.ContentKey);
                         var viewModel = new LessonViewModel
                         {
                             Slug = lesson.Slug,
                             Title = lesson.Title,
                             Summary = lesson.Summary,
-                            Content = lesson.Content,
+                            Content = content,
                             Level = lesson.Level,
                             Stage = lesson.Stage,
                             Genres = lesson.Genres,
