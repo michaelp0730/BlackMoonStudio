@@ -14,12 +14,14 @@ namespace BlackMoonStudio.Controllers
         public IActionResult GetLessons(string category, string slug)
         {
             var lesson = new Lesson();
+            var nextLesson = new Lesson();
             var lessonList = new List<Lesson>();
             var curation = new Curation();
             var lessonsCuration = lesson.GetCurationList("Lessons");
             var lessonContentsSerializer = new XmlSerializer(typeof(LessonContents));
             var relatedLessons = new List<Lesson>();
             var viewModel = new LessonViewModel();
+            int lessonCurationIndex;
             LessonContents lessonContents;
             FileStream fileStream;
 
@@ -27,6 +29,8 @@ namespace BlackMoonStudio.Controllers
             {
                 case "advanced":
                     lessonList = lesson.GetLessonsByCategory("Advanced");
+                    curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Advanced");
+
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
@@ -45,7 +49,6 @@ namespace BlackMoonStudio.Controllers
                         }
                     }
 
-                    curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Advanced");
                     return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
                     {
                         Level = Levels.Advanced,
@@ -56,6 +59,8 @@ namespace BlackMoonStudio.Controllers
                     });
                 case "intermediate":
                     lessonList = lesson.GetLessonsByCategory("Intermediate");
+                    curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Intermediate");
+
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
@@ -74,7 +79,6 @@ namespace BlackMoonStudio.Controllers
                         }
                     }
 
-                    curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Intermediate");
                     return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
                     {
                         Level = Levels.Intermediate,
@@ -85,9 +89,18 @@ namespace BlackMoonStudio.Controllers
                     });
                 default:
                     lessonList = lesson.GetLessonsByCategory("Beginner");
+                    curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
+
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
+                        lessonCurationIndex = Array.IndexOf(curation?.LessonSlugs, lesson?.Slug);
+
+                        if (lessonList.Count >= lessonCurationIndex)
+                        {
+                            nextLesson = lessonList[lessonCurationIndex];
+                        }
+
                         fileStream = new FileStream("Xml/Lessons/Beginner.xml", FileMode.Open);
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
                         fileStream.Dispose();
@@ -99,7 +112,7 @@ namespace BlackMoonStudio.Controllers
                             {
                                 var thisLesson = lessonList.FirstOrDefault(x => x.Slug == lessonSlug);
                                 relatedLessons.Add(thisLesson);
-                            }    
+                            }
                         }
 
                         if (lesson != null && content != null)
@@ -115,11 +128,16 @@ namespace BlackMoonStudio.Controllers
                             viewModel.Videos = lesson.Videos;
                             viewModel.Articles = lesson.Articles;
                             viewModel.RelatedLessons = relatedLessons.ToArray();
+
+                            if (!string.IsNullOrEmpty(nextLesson.Title) && !string.IsNullOrEmpty(nextLesson.Url))
+                            {
+                                viewModel.NextLesson = nextLesson;
+                            }
+
                             return View("Pages/lessons/_details.cshtml", viewModel);
                         }
                     }
 
-                    curation = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
                     return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
                     {
                         Level = Levels.Beginner,

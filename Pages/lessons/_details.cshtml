@@ -53,7 +53,7 @@
 
 <div class="container-fluid">
     <div class="row bg-navy">
-        <div class="col text-center">
+        <div class="col-sm-12 text-center">
             <h1>@Model.Title</h1>
             <p><em>@Model.Summary</em>
             </p>
@@ -130,6 +130,18 @@
             @Html.Partial("ArticlesColumn", articlesColumn1.ToArray())
             @Html.Partial("ArticlesColumn", articlesColumn2.ToArray())
             @Html.Partial("ArticlesColumn", articlesColumn3.ToArray())
+        </div>
+    }
+    
+    @if (Model.NextLesson != null)
+    {
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="pull-right">
+                    <span>Next Lesson: </span>
+                    <a href="@Model.NextLesson.Url" class="arrow-link">@Model.NextLesson.Title</a>
+                </div>
+            </div>
         </div>
     }
 </div>
