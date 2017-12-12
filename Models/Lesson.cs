@@ -1,7 +1,5 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
-using BlackMoonStudio.Models;
 using Newtonsoft.Json;
 
 namespace BlackMoonStudio.Models
@@ -23,7 +21,7 @@ namespace BlackMoonStudio.Models
         {
             var lessonList = new List<Lesson>();
 
-            using (StreamReader sr = new StreamReader(path: $"Json/Lessons/{level}.json"))
+            using (var sr = new StreamReader(path: $"Json/Lessons/{level}.json"))
             {
                 lessonList = JsonConvert.DeserializeObject<List<Lesson>>(sr.ReadToEnd());
             }
@@ -35,7 +33,7 @@ namespace BlackMoonStudio.Models
         {
             var curationList = new List<Curation>();
 
-            using (StreamReader sr = new StreamReader(path: $"Json/Curation/{list}.json"))
+            using (var sr = new StreamReader(path: $"Json/Curation/{list}.json"))
             {
                 curationList = JsonConvert.DeserializeObject<List<Curation>>(sr.ReadToEnd());
             }

@@ -1,14 +1,12 @@
-@model BlackMoonStudio.Models.LessonViewModel
-@using BlackMoonStudio.Models
-@using Microsoft.AspNetCore.Html
-@using System
+@model LessonViewModel
+@using Models
 @using System.Linq
-@using System.Collections.Generic
 @{
     Layout = "~/Pages/_Layout.cshtml";
     ViewData["Title"] = Model.Title;
     var allArticles = Model.Articles;
     var articleCount = allArticles?.Count();
+    var breadcrumbLevel = new Link();
     List<Article> articlesColumn1 = new List<Article>();
     List<Article> articlesColumn2 = new List<Article>();
     List<Article> articlesColumn3 = new List<Article>();
@@ -32,13 +30,39 @@
             articlesColumn3 = allArticles.Skip((int)quotient * 2).ToList();
         }
     }
+
+    switch (Model.Level.ToString())
+    {
+        case "Advanced":
+            breadcrumbLevel.Text = "Advanced Lessons";
+            breadcrumbLevel.Url = "/lessons/advanced/";
+            break;
+        case "Intermediate":
+            breadcrumbLevel.Text = "Intermediate Lessons";
+            breadcrumbLevel.Url = "/lessons/intermediate/";
+            break;
+        default:
+            breadcrumbLevel.Text = "Beginner Lessons";
+            breadcrumbLevel.Url = "/lessons/beginner/";
+            break;
+    }
 }
 
 <div class="container-fluid">
     <div class="row bg-navy">
         <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
             <h1>@Model.Title</h1>
-            <p><em>@Model.Summary</em></p>
+            <p><em>@Model.Summary</em>
+            </p>
+        </div>
+    </div>
+    <div class="row row-size0">
+        <div class="col">
+            <div class="breadcrumb lesson-details-breadcrumb">
+                <a asp-page="/Index">Home</a> / 
+                <a href="@breadcrumbLevel.Url">@breadcrumbLevel.Text</a> /
+                @Model.Title
+            </div>
         </div>
     </div>
     @if (Model.Content?.Text != null)

@@ -2,10 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using BlackMoonStudio.Models;
 
 namespace BlackMoonStudio.Controllers
@@ -52,8 +50,7 @@ namespace BlackMoonStudio.Controllers
                         Heading = "Advanced Guitar Lessons",
                         Summary = "Time to take your game to a whole new level. The advanced lessons are more focused on techniques than anything else. Be prepared to practice - a lot - as these techniques require significant muscle memory, and rhythm. As always, you'll be better off if you practice with a metronome.",
                         Path = "/lessons/advanced/",
-                        Lessons = lessonList.OrderBy(x => 
-                            { return Array.IndexOf(curation.LessonSlugs, x.Slug); } ).ToArray(),
+                        Lessons = lessonList.OrderBy(x => Array.IndexOf(curation?.LessonSlugs, x.Slug)).ToArray(),
                     });
                 case "intermediate":
                     lessonList = lesson.GetLessons("Intermediate");
@@ -82,8 +79,7 @@ namespace BlackMoonStudio.Controllers
                         Heading = "Intermediate Guitar Lessons",
                         Summary = "Time to take the basic concepts from the Beginner category and start learning lots of fun new stuff. Soon you will feel comfortable playing leads and solos in any key, anywhere on the neck. Your understanding of music theory, and your comfort level navigating the fretboard, are about to grow significantly. Let's get started!",
                         Path = "/lessons/intermediate/",
-                        Lessons = lessonList.OrderBy(x => 
-                            { return Array.IndexOf(curation.LessonSlugs, x.Slug); } ).ToArray(),
+                        Lessons = lessonList.OrderBy(x => Array.IndexOf(curation?.LessonSlugs, x.Slug)).ToArray(),
                     });
                 default:
                     lessonList = lesson.GetLessons("Beginner");
@@ -117,8 +113,7 @@ namespace BlackMoonStudio.Controllers
                         Heading = "Beginner Guitar Lessons",
                         Summary = "These lessons will take the absolute beginner to a point where they are ready to start exploring various playing techniques, and genre-specific licks. Like all categories, the lessons are broken down into 3 stages, so you can think of the stages as mini categories.",
                         Path = "/lessons/beginner/",
-                        Lessons = lessonList.OrderBy(x => 
-                            { return Array.IndexOf(curation.LessonSlugs, x.Slug); } ).ToArray(),
+                        Lessons = lessonList.OrderBy(x => Array.IndexOf(curation?.LessonSlugs, x.Slug)).ToArray(),
                     });
             }
         }

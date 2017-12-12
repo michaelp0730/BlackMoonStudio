@@ -13,18 +13,17 @@ namespace BlackMoonStudio.Pages
 {
     public class IndexModel : PageModel
     {
-        public Lesson[] BeginnerLessons { get; set; }
-        public Content[] BeginnerContents { get; set; }
-        public Lesson[] IntermediateLessons { get; set; }
-        public Lesson[] AdvancedLessons { get; set; }
+        public Lesson[] BeginnerLessons { get; private set; }
+        private Content[] BeginnerContents { get; set; }
+        public Lesson[] IntermediateLessons { get; private set; }
+        public Lesson[] AdvancedLessons { get; private set; }
         public void OnGetAsync()
         {
             var lesson = new Lesson();
-            LessonContents beginnerContents;
             var beginnerContentsSerializer = new XmlSerializer(typeof(LessonContents));
             var beginnerContentsFileStream = new FileStream("Xml/Lessons/Beginner.xml", FileMode.Open);
 
-            beginnerContents = (LessonContents)beginnerContentsSerializer.Deserialize(beginnerContentsFileStream);
+            var beginnerContents = (LessonContents)beginnerContentsSerializer.Deserialize(beginnerContentsFileStream);
             beginnerContentsFileStream.Dispose();
 
             var lessonsCuration = lesson.GetCurationList("Lessons");
@@ -32,16 +31,13 @@ namespace BlackMoonStudio.Pages
             var intermediateCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Intermediate");
             var advancedCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Advanced");
 
-            BeginnerLessons = lesson.GetLessons("Beginner").OrderBy(x => 
-                { return Array.IndexOf(beginnerCuration.LessonSlugs, x.Slug); } ).ToArray();
+            BeginnerLessons = lesson.GetLessons("Beginner").OrderBy(x => Array.IndexOf(beginnerCuration?.LessonSlugs, x.Slug)).ToArray();
 
             BeginnerContents = beginnerContents.Contents;
 
-            IntermediateLessons = lesson.GetLessons("Intermediate").OrderBy(x => 
-                { return Array.IndexOf(intermediateCuration.LessonSlugs, x.Slug); } ).ToArray();
+            IntermediateLessons = lesson.GetLessons("Intermediate").OrderBy(x => Array.IndexOf(intermediateCuration?.LessonSlugs, x.Slug)).ToArray();
 
-            AdvancedLessons = lesson.GetLessons("Advanced").OrderBy(x => 
-                { return Array.IndexOf(advancedCuration.LessonSlugs, x.Slug); } ).ToArray();
+            AdvancedLessons = lesson.GetLessons("Advanced").OrderBy(x => Array.IndexOf(advancedCuration?.LessonSlugs, x.Slug)).ToArray();
         }
     }
 }

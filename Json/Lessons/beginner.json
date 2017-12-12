@@ -118,6 +118,9 @@
                 "Url": "https://music.tutsplus.com/articles/10-essential-principles-for-learning-guitar--audio-6414"
             }
         ],
-        "RelatedLessonSlugs": []
+        "RelatedLessonSlugs": [
+            "changing-strings",
+            "the-5-basic-chord-forms"
+        ]
     }
 ]

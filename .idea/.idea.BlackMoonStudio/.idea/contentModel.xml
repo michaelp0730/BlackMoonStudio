@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\github\BlackMoonStudio" t="IncludeRecursive">
+      <e p=".gitignore" t="Include" />
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="BlackMoonStudio.csproj" t="IncludeRecursive" />
+      <e p="BlackMoonStudio.sln" t="IncludeFlat" />
+      <e p="bundleconfig.json" t="Include" />
+      <e p="Controllers" t="Include">
+        <e p="LessonsController.cs" t="Include" />
+      </e>
+      <e p="Json" t="Include">
+        <e p="Curation" t="Include">
+          <e p="Lessons.json" t="Include" />
+        </e>
+        <e p="lessons" t="Include">
+          <e p="Advanced.json" t="Include" />
+          <e p="Beginner.json" t="Include" />
+          <e p="Intermediate.json" t="Include" />
+        </e>
+      </e>
+      <e p="LICENSE" t="Include" />
+      <e p="Models" t="Include">
+        <e p="Article.cs" t="Include" />
+        <e p="Content.cs" t="Include" />
+        <e p="Curation.cs" t="Include" />
+        <e p="Diagram.cs" t="Include" />
+        <e p="Lesson.cs" t="Include" />
+        <e p="LessonCategoryIndex.cs" t="Include" />
+        <e p="LessonContents.cs" t="Include" />
+        <e p="LessonsColumn.cs" t="Include" />
+        <e p="LessonViewModel.cs" t="Include" />
+        <e p="Link.cs" t="Include" />
+        <e p="Video.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp2.0" t="Include">
+            <e p="BlackMoonStudio.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Pages" t="Include">
+        <e p="_Layout.cshtml" t="Include" />
+        <e p="_ValidationScriptsPartial.cshtml" t="Include" />
+        <e p="_ViewImports.cshtml" t="Include" />
+        <e p="_ViewStart.cshtml" t="Include" />
+        <e p="About.cshtml" t="Include" />
+        <e p="About.cshtml.cs" t="Include" />
+        <e p="Contact.cshtml" t="Include" />
+        <e p="Contact.cshtml.cs" t="Include" />
+        <e p="Error.cshtml" t="Include" />
+        <e p="Error.cshtml.cs" t="Include" />
+        <e p="Index.cshtml" t="Include" />
+        <e p="Index.cshtml.cs" t="Include" />
+        <e p="lessons" t="Include">
+          <e p="_details.cshtml" t="Include" />
+          <e p="_landing.cshtml" t="Include" />
+        </e>
+      </e>
+      <e p="Program.cs" t="Include" />
+      <e p="README.md" t="Include" />
+      <e p="Startup.cs" t="Include" />
+      <e p="Views" t="Include">
+        <e p="Shared" t="Include">
+          <e p="ArticlesColumn.cshtml" t="Include" />
+          <e p="Footer.cshtml" t="Include" />
+          <e p="LessonsColumn.cshtml" t="Include" />
+        </e>
+      </e>
+      <e p="wwwroot" t="Include">
+        <e p="css" t="Include">
+          <e p="site.css" t="Include" />
+          <e p="site.min.css" t="Include" />
+        </e>
+        <e p="favicon.ico" t="Include" />
+        <e p="images" t="Include">
+          <e p="banner1.svg" t="Include" />
+          <e p="banner2.svg" t="Include" />
+          <e p="banner3.svg" t="Include" />
+          <e p="banner4.svg" t="Include" />
+          <e p="logo-bg.png" t="Include" />
+        </e>
+        <e p="js" t="Include">
+          <e p="site.js" t="Include" />
+          <e p="site.min.js" t="Include" />
+        </e>
+        <e p="lib" t="Include">
+          <e p="bootstrap" t="Include">
+            <e p=".bower.json" t="Include" />
+            <e p="dist" t="Include">
+              <e p="css" t="Include">
+                <e p="bootstrap-theme.css" t="Include" />
+                <e p="bootstrap-theme.css.map" t="Include" />
+                <e p="bootstrap-theme.min.css.map" t="Include" />
+                <e p="bootstrap.css" t="Include" />
+                <e p="bootstrap.css.map" t="Include" />
+                <e p="bootstrap.min.css.map" t="Include" />
+              </e>
+              <e p="fonts" t="Include">
+                <e p="glyphicons-halflings-regular.eot" t="Include" />
+                <e p="glyphicons-halflings-regular.svg" t="Include" />
+                <e p="glyphicons-halflings-regular.ttf" t="Include" />
+                <e p="glyphicons-halflings-regular.woff" t="Include" />
+                <e p="glyphicons-halflings-regular.woff2" t="Include" />
+              </e>
+              <e p="js" t="Include">
+                <e p="bootstrap.js" t="Include" />
+                <e p="npm.js" t="Include" />
+              </e>
+            </e>
+            <e p="LICENSE" t="Include" />
+          </e>
+          <e p="jquery" t="Include">
+            <e p=".bower.json" t="Include" />
+            <e p="dist" t="Include">
+              <e p="jquery.js" t="Include" />
+              <e p="jquery.min.map" t="Include" />
+            </e>
+            <e p="LICENSE.txt" t="Include" />
+          </e>
+          <e p="jquery-validation" t="Include">
+            <e p=".bower.json" t="Include" />
+            <e p="dist" t="Include">
+              <e p="additional-methods.js" t="Include" />
+              <e p="jquery.validate.js" t="Include" />
+            </e>
+            <e p="LICENSE.md" t="Include" />
+          </e>
+          <e p="jquery-validation-unobtrusive" t="Include">
+            <e p=".bower.json" t="Include" />
+            <e p="jquery.validate.unobtrusive.js" t="Include" />
+            <e p="jquery.validate.unobtrusive.min.js" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="Xml" t="Include">
+        <e p="lessons" t="Include">
+          <e p="Beginner.xml" t="Include" />
+        </e>
+      </e>
+    </e>
+    <e p="C:\Users\mipelleg\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_BlackMoonStudio.-1562683088.00" t="ExcludeRecursive" />
+  </component>
+</project>

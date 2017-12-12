@@ -1,11 +1,11 @@
-@model Article[];
+@model Article[]
 @using BlackMoonStudio.Models
 
 <div class="col-md-4">
     <div class="list-group">
         @foreach (var article in Model)
         {
-            <a href="@article.Url" class="list-group-item list-group-item-action" target="_blank">
+            <a href="@article.Url" class="list-group-item" target="_blank">
                 <h4>@article.Title</h4>
                 <p>@article.Caption</p>
             </a>
