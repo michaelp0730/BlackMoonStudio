@@ -35,6 +35,7 @@ namespace BlackMoonStudio.Controllers
                             Slug = lesson.Slug,
                             Title = lesson.Title,
                             Summary = lesson.Summary,
+                            Url = lesson.Url,
                             Level = lesson.Level,
                             Stage = lesson.Stage,
                             Genres = lesson.Genres,
@@ -63,6 +64,7 @@ namespace BlackMoonStudio.Controllers
                             Slug = lesson.Slug,
                             Title = lesson.Title,
                             Summary = lesson.Summary,
+                            Url = lesson.Url,
                             Level = lesson.Level,
                             Stage = lesson.Stage,
                             Genres = lesson.Genres,
@@ -96,7 +98,7 @@ namespace BlackMoonStudio.Controllers
                             foreach (var lessonSlug in lesson.RelatedLessonSlugs)
                             {
                                 var thisLesson = lessonList.FirstOrDefault(x => x.Slug == lessonSlug);
-                                lessonList.Add(thisLesson);
+                                relatedLessons.Add(thisLesson);
                             }    
                         }
                         
@@ -105,13 +107,14 @@ namespace BlackMoonStudio.Controllers
                             Slug = lesson.Slug,
                             Title = lesson.Title,
                             Summary = lesson.Summary,
+                            Url = lesson.Url,
                             Content = content,
                             Level = lesson.Level,
                             Stage = lesson.Stage,
                             Genres = lesson.Genres,
                             Videos = lesson.Videos,
                             Articles = lesson.Articles,
-                            RelatedLessons = lessonList.ToArray(),
+                            RelatedLessons = relatedLessons.ToArray(),
                         };
                         return View("Pages/lessons/_details.cshtml", viewModel);
                     }

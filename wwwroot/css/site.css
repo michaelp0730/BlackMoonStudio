@@ -76,7 +76,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .related-lessons li {
+    margin-bottom: 30px;
     padding: 0;
+}
+
+.related-lessons li h5 {
+    margin-bottom: 3px;
 }
 
 .videos-container .row.border-bottom-gray:last-child {

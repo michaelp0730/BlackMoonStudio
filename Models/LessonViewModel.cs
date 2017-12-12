@@ -9,6 +9,7 @@ namespace BlackMoonStudio.Models
     public class LessonViewModel
     {
         public string Slug { get; set; }
+        public string Url { get; set; }
         public string Title { get; set; }
         public string Summary { get; set; }
         public Content Content { get; set; }

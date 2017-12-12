@@ -77,13 +77,13 @@
             @if (Model.RelatedLessons?.Any() == true)
             {
                 <div class="col-md-4 col-lg-3">
-                    <h4>Related Lessons</h4>
+                    <h4 class="border-bottom-gray">Related Lessons</h4>
                     <ul class="related-lessons">
                         @foreach (var lesson in Model.RelatedLessons)
                         {
                             <li>
                                 <h5>
-                                    <a href="#">@lesson.Title</a>
+                                    <a href="@lesson.Url">@lesson.Title</a>
                                 </h5>
                                 <em><small>@lesson.Summary</small></em>
                             </li>
