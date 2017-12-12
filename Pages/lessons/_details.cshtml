@@ -7,9 +7,12 @@
     var allArticles = Model.Articles;
     var articleCount = allArticles?.Count();
     var breadcrumbLevel = new Link();
-    List<Article> articlesColumn1 = new List<Article>();
-    List<Article> articlesColumn2 = new List<Article>();
-    List<Article> articlesColumn3 = new List<Article>();
+    var articlesColumn1 = new List<Article>();
+    var articlesColumn2 = new List<Article>();
+    var articlesColumn3 = new List<Article>();
+    var contentColStructure = Model.RelatedLessons?.Any() == true ? 
+        "col-md-8 col-lg-9" : 
+        "col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2";
 
     if (articleCount > 0)
     {
@@ -50,7 +53,7 @@
 
 <div class="container-fluid">
     <div class="row bg-navy">
-        <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <div class="@contentColStructure">
             <h1>@Model.Title</h1>
             <p><em>@Model.Summary</em>
             </p>
@@ -68,10 +71,27 @@
     @if (Model.Content?.Text != null)
     {
         <div class="row">
-            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+            <div class="@contentColStructure">
                 @Html.Raw(Model.Content.Text)
             </div>
-        </div>
+            @if (Model.RelatedLessons?.Any() == true)
+            {
+                <div class="col-md-4 col-lg-3">
+                    <h4>Related Lessons</h4>
+                    <ul class="related-lessons">
+                        @foreach (var lesson in Model.RelatedLessons)
+                        {
+                            <li>
+                                <h5>
+                                    <a href="#">@lesson.Title</a>
+                                </h5>
+                                <em><small>@lesson.Summary</small></em>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+         </div>
     }
 
     @if (Model.Videos?.Any() == true)

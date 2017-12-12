@@ -5,6 +5,7 @@ using System.Linq;
 using System.Xml.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using BlackMoonStudio.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlackMoonStudio.Controllers
 {
@@ -18,13 +19,14 @@ namespace BlackMoonStudio.Controllers
             var curation = new Curation();
             var lessonsCuration = lesson.GetCurationList("Lessons");
             var lessonContentsSerializer = new XmlSerializer(typeof(LessonContents));
+            var relatedLessons = new List<Lesson>();
             LessonContents lessonContents;
             FileStream fileStream;
 
             switch (category)
             {
                 case "advanced":
-                    lessonList = lesson.GetLessons("Advanced");
+                    lessonList = lesson.GetLessonsByCategory("Advanced");
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
@@ -38,7 +40,6 @@ namespace BlackMoonStudio.Controllers
                             Genres = lesson.Genres,
                             Videos = lesson.Videos,
                             Articles = lesson.Articles,
-                            RelatedLessonSlugs = lesson.RelatedLessonSlugs,
                         };
                         return View("Pages/lessons/_details.cshtml", viewModel);
                     }
@@ -53,7 +54,7 @@ namespace BlackMoonStudio.Controllers
                         Lessons = lessonList.OrderBy(x => Array.IndexOf(curation?.LessonSlugs, x.Slug)).ToArray(),
                     });
                 case "intermediate":
-                    lessonList = lesson.GetLessons("Intermediate");
+                    lessonList = lesson.GetLessonsByCategory("Intermediate");
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
@@ -67,7 +68,6 @@ namespace BlackMoonStudio.Controllers
                             Genres = lesson.Genres,
                             Videos = lesson.Videos,
                             Articles = lesson.Articles,
-                            RelatedLessonSlugs = lesson.RelatedLessonSlugs,
                         };
                         return View("Pages/lessons/_details.cshtml", viewModel);
                     }
@@ -82,7 +82,7 @@ namespace BlackMoonStudio.Controllers
                         Lessons = lessonList.OrderBy(x => Array.IndexOf(curation?.LessonSlugs, x.Slug)).ToArray(),
                     });
                 default:
-                    lessonList = lesson.GetLessons("Beginner");
+                    lessonList = lesson.GetLessonsByCategory("Beginner");
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = lessonList.FirstOrDefault(x => x.Slug == slug);
@@ -90,6 +90,16 @@ namespace BlackMoonStudio.Controllers
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
                         fileStream.Dispose();
                         var content = lessonContents.Contents.FirstOrDefault(x => x.Key == lesson.ContentKey);
+
+                        if (lesson.RelatedLessonSlugs?.Any() == true)
+                        {
+                            foreach (var lessonSlug in lesson.RelatedLessonSlugs)
+                            {
+                                var thisLesson = lessonList.FirstOrDefault(x => x.Slug == lessonSlug);
+                                lessonList.Add(thisLesson);
+                            }    
+                        }
+                        
                         var viewModel = new LessonViewModel
                         {
                             Slug = lesson.Slug,
@@ -101,7 +111,7 @@ namespace BlackMoonStudio.Controllers
                             Genres = lesson.Genres,
                             Videos = lesson.Videos,
                             Articles = lesson.Articles,
-                            RelatedLessonSlugs = lesson.RelatedLessonSlugs,
+                            RelatedLessons = lessonList.ToArray(),
                         };
                         return View("Pages/lessons/_details.cshtml", viewModel);
                     }

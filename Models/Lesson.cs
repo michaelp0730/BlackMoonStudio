@@ -17,7 +17,7 @@ namespace BlackMoonStudio.Models
         public Article[] Articles { get; set; }
         public string[] RelatedLessonSlugs { get; set; }
 
-        public List<Lesson> GetLessons(string level)
+        public List<Lesson> GetLessonsByCategory(string level)
         {
             var lessonList = new List<Lesson>();
 

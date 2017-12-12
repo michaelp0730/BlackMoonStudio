@@ -17,7 +17,7 @@ namespace BlackMoonStudio.Models
         public string[] Genres { get; set; }
         public IEnumerable<Video> Videos { get; set; }
         public Article[] Articles { get; set; }
-        public string[] RelatedLessonSlugs { get; set; }
+        public Lesson[] RelatedLessons { get; set; }
         public Lesson NextLesson { get; set; }
     }
 }
