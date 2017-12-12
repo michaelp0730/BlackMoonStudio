@@ -114,7 +114,7 @@ namespace BlackMoonStudio.Controllers
                             viewModel.Genres = lesson.Genres;
                             viewModel.Videos = lesson.Videos;
                             viewModel.Articles = lesson.Articles;
-                            viewModel.RelatedLessons = relatedLessons.ToArray()();
+                            viewModel.RelatedLessons = relatedLessons.ToArray();
                             return View("Pages/lessons/_details.cshtml", viewModel);
                         }
                     }
