@@ -74,21 +74,30 @@
             <div class="@contentColStructure">
                 @Html.Raw(Model.Content.Text)
             </div>
-            @if (Model.RelatedLessons?.Any() == true)
+
+            @if (Model.RelatedLessons?.Any() == true || Model.NextLesson != null)
             {
                 <div class="col-md-4 col-lg-3">
-                    <h4 class="border-bottom-gray">Related Lessons</h4>
-                    <ul class="related-lessons">
-                        @foreach (var lesson in Model.RelatedLessons)
-                        {
-                            <li>
-                                <h5>
-                                    <a href="@lesson.Url">@lesson.Title</a>
-                                </h5>
-                                <em><small>@lesson.Summary</small></em>
-                            </li>
-                        }
-                    </ul>
+                    @if (Model.RelatedLessons?.Any() == true)
+                    {
+                        <h4 class="border-bottom-gray">Related Lessons</h4>
+                        <ul class="related-lessons">
+                            @foreach (var lesson in Model.RelatedLessons)
+                            {
+                                <li>
+                                    <h5>
+                                        <a href="@lesson.Url">@lesson.Title</a>
+                                    </h5>
+                                    <em><small>@lesson.Summary</small></em>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    @if (Model.NextLesson != null)
+                    {
+                        <h4 class="border-bottom-gray">Next Lesson</h4>
+                        <a href="@Model.NextLesson.Url" class="arrow-link">@Model.NextLesson.Title</a>
+                    }
                 </div>
             }
          </div>
