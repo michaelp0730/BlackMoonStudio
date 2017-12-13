@@ -10,8 +10,8 @@
     var articlesColumn1 = new List<Article>();
     var articlesColumn2 = new List<Article>();
     var articlesColumn3 = new List<Article>();
-    var contentColStructure = Model.RelatedLessons?.Any() == true ? 
-        "col-md-8 col-lg-9" : 
+    var contentColStructure = Model.RelatedLessons?.Any() == true ?
+        "col-md-8 col-lg-9" :
         "col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2";
 
     if (articleCount > 0)
@@ -62,7 +62,7 @@
     <div class="row row-size0">
         <div class="col">
             <div class="breadcrumb lesson-details-breadcrumb">
-                <a asp-page="/Index">Home</a> / 
+                <a asp-page="/Index">Home</a> /
                 <a href="@breadcrumbLevel.Url">@breadcrumbLevel.Text</a> /
                 @Model.Title
             </div>
@@ -71,7 +71,7 @@
     @if (Model.Content?.Text != null)
     {
         <div class="row">
-            <div class="@contentColStructure">
+            <div class="@contentColStructure lesson-body-content">
                 @Html.Raw(Model.Content.Text)
             </div>
 
@@ -141,7 +141,7 @@
             @Html.Partial("ArticlesColumn", articlesColumn3.ToArray())
         </div>
     }
-    
+
     @if (Model.NextLesson != null)
     {
         <div class="row">

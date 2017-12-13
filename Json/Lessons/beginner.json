@@ -10,19 +10,39 @@
         "Genres": [],
         "Videos": [
             {
-                "Slug": "",
-                "Title": "",
-                "Caption": ""
-            }
-        ],
-        "Articles": [
+                "Slug": "Y_UiNnIPD-s",
+                "Title": "Best Way to Change Your Guitar Strings",
+                "Caption": "A solid breakdown, specifically meant for changing strings on electric guitars"
+            },
             {
-                "Title": "A single article test",
-                "Caption": "Just testing this out with a single article",
-                "Url": "https://reverb.com"
+                "Slug": "4CtqfHmssx8",
+                "Title": "How to Change Your Electric Guitar Strings | Fender",
+                "Caption": "A pretty quick lesson from a very credible source - Fender"
+            },
+            {
+                "Slug": "0xxeRFEP1Y4",
+                "Title": "How to Change Your Acoustic Guitar Strings | Fender",
+                "Caption": "Another quick lesson from Fender, this time for acoustic guitars"
+            },
+            {
+                "Slug": "GIzVdvzn8d8",
+                "Title": "Restringing Your Acoustic Guitar",
+                "Caption": "Luthiers from Martin Guitars show you how to restring a steel-string acoustic"
+            },
+            {
+                "Slug": "Yx1IG93sEs4",
+                "Title": "Restringing Your Classical Guitar",
+                "Caption": "Luthiers from Martin Guitars show you how to restring a nylon string classical guitar"
+            },
+            {
+                "Slug": "g-iIg0edlKU",
+                "Title": "How To Change Classical Guitar Strings | Strings By Mail.com",
+                "Caption": "A thorough lesson on restringing classical guitars"
             }
         ],
-        "RelatedLessonSlugs": []
+        "RelatedLessonSlugs": [
+            "welcome-to-the-guitar"
+        ]
     },
     {
         "Slug": "the-5-basic-chord-forms",
