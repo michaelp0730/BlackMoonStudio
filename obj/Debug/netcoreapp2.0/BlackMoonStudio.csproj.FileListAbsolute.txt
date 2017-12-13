@@ -8,3 +8,4 @@ C:\github\BlackMoonStudio\bin\Debug\netcoreapp2.0\BlackMoonStudio.dll
 C:\github\BlackMoonStudio\bin\Debug\netcoreapp2.0\BlackMoonStudio.pdb
 C:\github\BlackMoonStudio\obj\Debug\netcoreapp2.0\BlackMoonStudio.dll
 C:\github\BlackMoonStudio\obj\Debug\netcoreapp2.0\BlackMoonStudio.pdb
+C:\github\BlackMoonStudio\obj\Debug\netcoreapp2.0\BlackMoonStudio.csprojResolveAssemblyReference.cache

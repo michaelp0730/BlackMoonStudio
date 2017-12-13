@@ -66,11 +66,11 @@ namespace BlackMoonStudio.Controllers
                                 viewModel.NextLesson = nextLesson;
                             }
 
-                            return View("Pages/lessons/_details.cshtml", viewModel);
+                            return View("~/Pages/lessons/_details.cshtml", viewModel);
                         }
                     }
 
-                    return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
+                    return View("~/Pages/lessons/_landing.cshtml", new LessonCategoryIndex
                     {
                         Level = Levels.Advanced,
                         Heading = "Advanced Guitar Lessons",
@@ -114,11 +114,11 @@ namespace BlackMoonStudio.Controllers
                                 viewModel.NextLesson = nextLesson;
                             }
 
-                            return View("Pages/lessons/_details.cshtml", viewModel);
+                            return View("~/Pages/lessons/_details.cshtml", viewModel);
                         }
                     }
 
-                    return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
+                    return View("~/Pages/lessons/_landing.cshtml", new LessonCategoryIndex
                     {
                         Level = Levels.Intermediate,
                         Heading = "Intermediate Guitar Lessons",
@@ -162,11 +162,11 @@ namespace BlackMoonStudio.Controllers
                                 viewModel.NextLesson = nextLesson;
                             }
 
-                            return View("Pages/lessons/_details.cshtml", viewModel);
+                            return View("~/Pages/lessons/_details.cshtml", viewModel);
                         }
                     }
 
-                    return View("Pages/lessons/_landing.cshtml", new LessonCategoryIndex
+                    return View("~/Pages/lessons/_landing.cshtml", new LessonCategoryIndex
                     {
                         Level = Levels.Beginner,
                         Heading = "Beginner Guitar Lessons",
