@@ -69,6 +69,8 @@
       <e p="Stylus" t="Include">
         <e p="Lesson.css" t="Include" />
         <e p="Lesson.styl" t="Include" />
+        <e p="Mixins.css" t="Include" />
+        <e p="Mixins.styl" t="Include" />
         <e p="PrimaryStyles.css" t="Include" />
         <e p="PrimaryStyles.styl" t="Include" />
         <e p="Variables.css" t="Include" />
