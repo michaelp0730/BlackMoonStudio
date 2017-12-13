@@ -58,12 +58,10 @@ namespace BlackMoonStudio.Models
         {
             var currentLessonCurationIndex = Array.IndexOf(lessonSlugsCuration, currentLesson.Slug);
 
-            if (currentLessonCurationIndex != -1 && lessonList.Count >= currentLessonCurationIndex)
-            {
-                return lessonList[currentLessonCurationIndex];
-            }
-
-            return new Lesson();
+            if (currentLessonCurationIndex == -1 || lessonList.Count <= currentLessonCurationIndex + 1) return new Lesson();
+            if (string.IsNullOrEmpty(lessonSlugsCuration[currentLessonCurationIndex + 1])) return new Lesson();
+            var nextLessonSlug = lessonSlugsCuration[currentLessonCurationIndex + 1];
+            return lessonList.FirstOrDefault(x => x.Slug == nextLessonSlug);
         }
 
         public static List<Lesson> GetRelatedLessons(this Lesson currentLesson, List<Lesson> lessonList)
