@@ -20,7 +20,7 @@ namespace BlackMoonStudio.Models
         public Article[] Articles { get; set; }
         public string[] RelatedLessonSlugs { get; set; }
 
-        public List<Lesson> GetLessonsByCategory(string level)
+        public static List<Lesson> GetLessonsByCategory(string level)
         {
             List<Lesson> lessonList;
 
@@ -32,7 +32,7 @@ namespace BlackMoonStudio.Models
             return lessonList;
         }
 
-        public List<Curation> GetCurationList(string list)
+        public static List<Curation> GetCurationList(string list)
         {
             List<Curation> curationList;
 

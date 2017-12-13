@@ -26,18 +26,18 @@ namespace BlackMoonStudio.Pages
             var beginnerContents = (LessonContents)beginnerContentsSerializer.Deserialize(beginnerContentsFileStream);
             beginnerContentsFileStream.Dispose();
 
-            var lessonsCuration = lesson.GetCurationList("Lessons");
+            var lessonsCuration = Lesson.GetCurationList("Lessons");
             var beginnerCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Beginner");
             var intermediateCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Intermediate");
             var advancedCuration = lessonsCuration.FirstOrDefault(x => x.Slug == "Advanced");
 
-            BeginnerLessons = lesson.GetLessonsByCategory("Beginner").OrderBy(x => Array.IndexOf(beginnerCuration?.LessonSlugs, x.Slug)).ToArray();
+            BeginnerLessons = Lesson.GetLessonsByCategory("Beginner").OrderBy(x => Array.IndexOf(beginnerCuration?.LessonSlugs, x.Slug)).ToArray();
 
             BeginnerContents = beginnerContents.Contents;
 
-            IntermediateLessons = lesson.GetLessonsByCategory("Intermediate").OrderBy(x => Array.IndexOf(intermediateCuration?.LessonSlugs, x.Slug)).ToArray();
+            IntermediateLessons = Lesson.GetLessonsByCategory("Intermediate").OrderBy(x => Array.IndexOf(intermediateCuration?.LessonSlugs, x.Slug)).ToArray();
 
-            AdvancedLessons = lesson.GetLessonsByCategory("Advanced").OrderBy(x => Array.IndexOf(advancedCuration?.LessonSlugs, x.Slug)).ToArray();
+            AdvancedLessons = Lesson.GetLessonsByCategory("Advanced").OrderBy(x => Array.IndexOf(advancedCuration?.LessonSlugs, x.Slug)).ToArray();
         }
     }
 }

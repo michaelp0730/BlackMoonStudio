@@ -14,11 +14,11 @@ namespace BlackMoonStudio.Controllers
         public IActionResult GetLessons(string category, string slug)
         {
             var lesson = new Lesson();
-            var beginnerLessonList = lesson.GetLessonsByCategory("Beginner");
-            var intermediateLessonList = lesson.GetLessonsByCategory("Intermediate");
-            var advancedLessonList = lesson.GetLessonsByCategory("Advanced");
+            var beginnerLessonList = Lesson.GetLessonsByCategory("Beginner");
+            var intermediateLessonList = Lesson.GetLessonsByCategory("Intermediate");
+            var advancedLessonList = Lesson.GetLessonsByCategory("Advanced");
             var allLessons = beginnerLessonList.Concat(intermediateLessonList).Concat(advancedLessonList).ToList();
-            var lessonsCuration = lesson.GetCurationList("Lessons");
+            var lessonsCuration = Lesson.GetCurationList("Lessons");
             var lessonContentsSerializer = new XmlSerializer(typeof(LessonContents));
             var relatedLessons = new List<Lesson>();
             var viewModel = new LessonViewModel();
