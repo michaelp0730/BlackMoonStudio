@@ -53,7 +53,7 @@
 
 <div class="container-fluid">
     <div class="row bg-navy">
-        <div class="col-sm-12 text-center">
+        <div class="col-xs-12 text-center">
             <h1>@Model.Title</h1>
             <p><em>@Model.Summary</em>
             </p>
@@ -77,27 +77,12 @@
 
             @if (Model.RelatedLessons?.Any() == true || Model.NextLesson != null)
             {
-                <div class="col-md-4 col-lg-3">
-                    @if (Model.RelatedLessons?.Any() == true)
+                <div class="lesson-sidebar">
+                    @Html.Partial("LessonSidebar", new LessonSidebar
                     {
-                        <h4 class="border-bottom-gray">Related Lessons</h4>
-                        <ul class="related-lessons">
-                            @foreach (var lesson in Model.RelatedLessons)
-                            {
-                                <li>
-                                    <h5>
-                                        <a href="@lesson.Url">@lesson.Title</a>
-                                    </h5>
-                                    <em><small>@lesson.Summary</small></em>
-                                </li>
-                            }
-                        </ul>
-                    }
-                    @if (Model.NextLesson != null)
-                    {
-                        <h4 class="border-bottom-gray">Next Lesson</h4>
-                        <a href="@Model.NextLesson.Url" class="arrow-link">@Model.NextLesson.Title</a>
-                    }
+                        RelatedLessons = Model.RelatedLessons,
+                        NextLesson = Model.NextLesson,
+                    })
                 </div>
             }
          </div>
@@ -120,7 +105,9 @@
                         <p>@video.Caption</p>
                     </div>
                     <div class="col-lg-6">
-                        <iframe width="560" height="315" src="@($"https://www.youtube.com/embed/{video.Slug}")" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                        <div class="video-container">
+                            <iframe src="@($"https://www.youtube.com/embed/{video.Slug}")" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             }
@@ -144,13 +131,24 @@
 
     @if (Model.NextLesson != null)
     {
-        <div class="row">
-            <div class="col-sm-12">
+        <div class="row hidden-xs">
+            <div class="col-xs-12">
                 <div class="pull-right">
                     <span>Next Lesson: </span>
                     <a href="@Model.NextLesson.Url" class="arrow-link">@Model.NextLesson.Title</a>
                 </div>
             </div>
+        </div>
+    }
+
+    @if (Model.RelatedLessons?.Any() == true || Model.NextLesson != null)
+    {
+        <div class="hidden-sm hidden-md hidden-lg">
+            @Html.Partial("LessonSidebar", new LessonSidebar
+            {
+                RelatedLessons = Model.RelatedLessons,
+                NextLesson = Model.NextLesson,
+            })
         </div>
     }
 </div>

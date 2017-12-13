@@ -4,6 +4,9 @@
 .lesson-body-content {
   padding-top: 12px;
 }
+.lesson-sidebar {
+  display: none;
+}
 .lessons-see-all {
   float: right;
   left: -13px;
@@ -20,9 +23,30 @@
 .related-lessons li h5 {
   margin-bottom: 3px;
 }
+.videos-container .video-container {
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  position: relative;
+}
+.videos-container .video-container iframe,
+.videos-container .video-container object,
+.videos-container .video-container embed {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 .videos-container .row.border-bottom-gray:last-child {
   border: none;
 }
 /* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .lesson-sidebar {
+    display: block;
+  }
+}
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */

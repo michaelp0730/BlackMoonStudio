@@ -32,6 +32,7 @@
         <e p="LessonCategoryIndex.cs" t="Include" />
         <e p="LessonContents.cs" t="Include" />
         <e p="LessonsColumn.cs" t="Include" />
+        <e p="LessonSidebar.cs" t="Include" />
         <e p="LessonViewModel.cs" t="Include" />
         <e p="Link.cs" t="Include" />
         <e p="Video.cs" t="Include" />
@@ -78,6 +79,7 @@
           <e p="ArticlesColumn.cshtml" t="Include" />
           <e p="Footer.cshtml" t="Include" />
           <e p="LessonsColumn.cshtml" t="Include" />
+          <e p="LessonSidebar.cshtml" t="Include" />
         </e>
       </e>
       <e p="wwwroot" t="Include">

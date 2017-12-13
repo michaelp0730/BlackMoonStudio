@@ -10,6 +10,10 @@
   padding-top: size1
 }
 
+.lesson-sidebar {
+  display: none
+}
+
 .lessons-see-all {
   float: right
   left: -13px
@@ -30,12 +34,34 @@
   }
 }
 
-.videos-container .row.border-bottom-gray:last-child {
-  border: none
+.videos-container {
+  .video-container {
+    height: 0
+    overflow: hidden
+    padding-bottom: 56.25%
+    padding-top: 30px
+    position: relative
+
+    iframe, object, embed {
+      height: 100%
+      left: 0
+      position: absolute
+      top: 0
+      width: 100%
+    }
+  }
+
+  .row.border-bottom-gray:last-child {
+    border: none
+  }
 }
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: screen-sm-min) {}
+@media (min-width: screen-sm-min) {
+  .lesson-sidebar {
+    display: block
+  }
+}
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: screen-md-min) {}
