@@ -1,0 +1,152 @@
+body {
+  font-family: 'Montserrat', 'Helvetica Neue', Helvetica, sans-serif;
+  padding-bottom: 20px;
+  padding-top: 50px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Vollkorn SC', Georgia, 'Times New Roman', Times, serif;
+}
+footer.main {
+  border-top: 1px solid #868e96;
+  font-size: 10px;
+  margin-top: 20px;
+  padding: 5px;
+  text-align: center;
+}
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.row {
+  padding: 12px 0;
+}
+.row.row-size0 {
+  padding: 0;
+}
+.row.row-size1 {
+  padding: 12px 0;
+}
+.row.row-size2 {
+  padding: 24px 0;
+}
+.row.row-size3 {
+  padding: 36px 0;
+}
+.row.row-size4 {
+  padding: 48px 0;
+}
+.row.row-size5 {
+  padding: 60px 0;
+}
+.row.row-size6 {
+  padding: 72px 0;
+}
+.bg-logo {
+  align-items: center;
+  background-color: #001433;
+  background-image: url("/images/logo-bg.png");
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  min-height: 260px;
+}
+.bg-navy {
+  background-color: #001433;
+  color: #fff;
+}
+.border-bottom-gray {
+  border-bottom: 1px solid #868e96;
+}
+.arrow-link {
+  color: inherit;
+  display: inline-block;
+  position: relative;
+}
+.arrow-link:after {
+  content: '>';
+  display: inline-block;
+  line-height: 1.5;
+  margin-left: 0.3em;
+  position: absolute;
+}
+.text-primary {
+  color: #007bff !important;
+}
+.text-secondary {
+  color: #868e96 !important;
+}
+.text-success {
+  color: #28a745 !important;
+}
+.text-danger {
+  color: #dc3545 !important;
+}
+.text-warning {
+  color: #ffc107 !important;
+}
+.text-info {
+  color: #17a2b8 !important;
+}
+.text-light {
+  color: #f8f9fa !important;
+}
+.text-dark {
+  color: #343a40 !important;
+}
+.text-muted {
+  color: #868e96 !important;
+}
+.bg-primary {
+  background-color: #007bff !important;
+}
+.bg-secondary {
+  background-color: #868e96 !important;
+}
+.bg-success {
+  background-color: #28a745 !important;
+}
+.bg-danger {
+  background-color: #dc3545 !important;
+}
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+.bg-dark {
+  background-color: #343a40 !important;
+}
+.lesson-details-breadcrumb .lesson-details-breadcrumb {
+  margin: 0;
+}
+.lesson-body-content {
+  padding-top: 12px;
+}
+.lessons-see-all {
+  float: right;
+  left: -13px;
+  margin-bottom: 20px;
+}
+.related-lessons {
+  list-style: none;
+  padding: 0;
+}
+.related-lessons li {
+  margin-bottom: 30px;
+  padding: 0;
+}
+.related-lessons li h5 {
+  margin-bottom: 3px;
+}
+.videos-container .row.border-bottom-gray:last-child {
+  border: none;
+}
