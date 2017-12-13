@@ -22,7 +22,7 @@ namespace BlackMoonStudio.Models
 
         public List<Lesson> GetLessonsByCategory(string level)
         {
-            var lessonList = new List<Lesson>();
+            List<Lesson> lessonList;
 
             using (var sr = new StreamReader(path: $"Json/Lessons/{level}.json"))
             {
@@ -34,7 +34,7 @@ namespace BlackMoonStudio.Models
 
         public List<Curation> GetCurationList(string list)
         {
-            var curationList = new List<Curation>();
+            List<Curation> curationList;
 
             using (var sr = new StreamReader(path: $"Json/Curation/{list}.json"))
             {
