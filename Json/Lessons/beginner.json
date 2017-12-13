@@ -59,24 +59,41 @@
         ],
         "Videos": [
             {
-                "Slug": "",
-                "Title": "",
-                "Caption": ""
+                "Slug": "J7yWMwWBBHw",
+                "Title": "The 5 Chords You Must Know to Play Up the Guitar Neck! (With diagrams)",
+                "Caption": "This video by Mark Zabel breaks down the 5 major open chords you need to be able to move up and down the neck comfortably."
+            },
+            {
+                "Slug": "c3Oy5VJYqxs",
+                "Title": "5 Tips to Change Guitar Chords Quickly & Smoothly",
+                "Caption": "This video focuses specifically on techniques for transitioning between chords. Remember to practice this with your metronome, as it will better prepare you to play along with songs and/or other musicians."
+            },
+            {
+                "Slug": "CmYzZu5h_Mo",
+                "Title": "These 2 Techniques Cure All Your Chord Transitioning Troubles",
+                "Caption": "Another good lesson on transitioning between chords. Don't worry about knowing all the chords he's playing in the lesson, just focus on the techniques for chord transitions."
             }
         ],
         "Articles": [
             {
-                "Title": "A double article test",
-                "Caption": "Just testing this out with two separate articles",
-                "Url": "https://google.com"
+                "Title": "The Five Basic Chord Shapes",
+                "Caption": "A nice easy breakdown of the 5 main open chord shapes, including a video.",
+                "Url": "https://guitaralliance.com/2013/07/the-five-basic-chord-shapes-2/"
             },
             {
-                "Title": "Part of the double article test",
-                "Caption": "Gotta have a second article for a two article test",
-                "Url": "https://google.com"
+                "Title": "Learn Guitar Chords – A Guide for Beginners",
+                "Caption": "This article not only shows the chord diagrams for each of the 5 main open chords, but it also shows photos of how your hands should be positioned, which is helpful. The article also has some videos of how to play those chords.",
+                "Url": "https://www.uberchord.com/blog/learn-guitar-chords/"
+            },
+            {
+                "Title": "Use These 5 Chords – Only 5 – To Unlock Your Entire Guitar Neck",
+                "Caption": "A nice breakdown on how the 5 basic chord forms can be used anywhere on the neck, in any key. Don't read this until you're comfortable playing all 5 open chord shapes.",
+                "Url": "https://rockprodigy.com/blog/unlock-the-fretboard"
             }
         ],
-        "RelatedLessonSlugs": []
+        "RelatedLessonSlugs": [
+            "the-caged-system"
+        ]
     },
     {
         "Slug": "welcome-to-the-guitar",
