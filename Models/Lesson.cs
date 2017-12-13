@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using Newtonsoft.Json;
 
 namespace BlackMoonStudio.Models
@@ -48,5 +50,25 @@ namespace BlackMoonStudio.Models
         Beginner,
         Intermediate,
         Advanced
+    }
+
+    public static class LessonHelpers
+    {
+        public static Lesson GetNextLesson(this Lesson currentLesson, string[] lessonSlugsCuration, List<Lesson> lessonList)
+        {
+            var currentLessonCurationIndex = Array.IndexOf(lessonSlugsCuration, currentLesson.Slug);
+
+            if (currentLessonCurationIndex != -1 && lessonList.Count >= currentLessonCurationIndex)
+            {
+                return lessonList[currentLessonCurationIndex];
+            }
+
+            return new Lesson();
+        }
+
+        public static List<Lesson> GetRelatedLessons(this Lesson currentLesson, List<Lesson> lessonList)
+        {
+            return currentLesson.RelatedLessonSlugs.Select(lessonSlug => lessonList.FirstOrDefault(x => x.Slug == lessonSlug)).ToList();
+        }
     }
 }
