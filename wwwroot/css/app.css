@@ -125,6 +125,14 @@ footer.main {
 .bg-dark {
   background-color: #343a40 !important;
 }
+.breadcrumb {
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .breadcrumb {
+    margin-bottom: 12px;
+  }
+}
 .lesson-details-breadcrumb .lesson-details-breadcrumb {
   margin: 0;
 }
@@ -169,8 +177,9 @@ footer.main {
 .videos-container .row.border-bottom-gray:last-child {
   border: none;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .lesson-sidebar {
     display: block;
+    margin-top: 0;
   }
 }

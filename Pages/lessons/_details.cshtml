@@ -131,7 +131,7 @@
 
     @if (Model.NextLesson != null)
     {
-        <div class="row hidden-xs">
+        <div class="row hidden-xs hidden-sm">
             <div class="col-xs-12">
                 <div class="pull-right">
                     <span>Next Lesson: </span>
@@ -143,7 +143,7 @@
 
     @if (Model.RelatedLessons?.Any() == true || Model.NextLesson != null)
     {
-        <div class="hidden-sm hidden-md hidden-lg">
+        <div class="hidden-md hidden-lg">
             @Html.Partial("LessonSidebar", new LessonSidebar
             {
                 RelatedLessons = Model.RelatedLessons,

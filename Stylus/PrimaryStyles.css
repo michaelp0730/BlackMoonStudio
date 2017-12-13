@@ -127,3 +127,12 @@ footer.main {
 .bg-dark {
   background-color: #343a40 !important;
 }
+.breadcrumb {
+  margin-bottom: 0;
+}
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .breadcrumb {
+    margin-bottom: 12px;
+  }
+}
