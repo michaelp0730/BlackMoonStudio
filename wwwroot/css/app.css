@@ -110,6 +110,9 @@ footer.main {
 .bg-success {
   background-color: #28a745 !important;
 }
+.bg-success a {
+  color: #f8f9fa !important;
+}
 .bg-danger {
   background-color: #dc3545 !important;
 }

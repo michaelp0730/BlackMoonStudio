@@ -161,6 +161,12 @@ namespace BlackMoonStudio.Controllers
                             {
                                 viewModel.NextLesson = nextLesson;
                             }
+                            else if (string.IsNullOrEmpty(nextLesson.Title) &&
+                                       string.IsNullOrEmpty(nextLesson.Url) &&
+                                       lesson.Slug == curation?.LessonSlugs[curation.LessonSlugs.Length - 1])
+                            {
+                                viewModel.IsLastLessonInCategory = true;
+                            }
 
                             return View("~/Pages/lessons/_details.cshtml", viewModel);
                         }

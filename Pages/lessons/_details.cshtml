@@ -13,6 +13,11 @@
     var contentColStructure = Model.RelatedLessons?.Any() == true ?
         "col-md-8 col-lg-9" :
         "col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2";
+    var nextCategoryLink = new Link
+    {
+        Text = Model.Level.ToString() == "Intermediate" ? "Advanced category" : "Intermediate category",
+        Url = Model.Level.ToString() == "Intermediate" ? "/lessons/advanced/" : "/lessons/intermediate/",
+    };
 
     if (articleCount > 0)
     {
@@ -149,6 +154,23 @@
                 RelatedLessons = Model.RelatedLessons,
                 NextLesson = Model.NextLesson,
             })
+        </div>
+    }
+
+    @if (Model.IsLastLessonInCategory)
+    {
+        <div class="row bg-success text-light text-center">
+            <div class="col-xs-12">
+                <h2>Congratulations!</h2>
+                @if (Model.Level.ToString() != "Advanced")
+                {
+                    <p>This was the last lesson in the @Model.Level category. Time to move onto the <a href="@nextCategoryLink.Url" class="text-light arrow-link">@nextCategoryLink.Text</a></p>
+                }
+                else
+                {
+                    <p>You have completed the Advanced lesson category. For now, that's all we've got, but please check back regularly, as our lesson list is never complete.</p>
+                }
+            </div>
         </div>
     }
 </div>
