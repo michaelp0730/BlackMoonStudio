@@ -168,14 +168,57 @@ footer.main {
   margin-bottom: 0
 }
 
-.border-radius-10 {
+.notification {
   border-radius(10px)
+  position: relative
+  text-align: center
+
+  &.notification-success {
+    background-color: color-success
+    color: white
+    padding: size1
+  }
+
+  .glyphicon {
+    display: block
+    font-size: size3
+  }
 }
 
+/* Small devices (tablets, 768px and up) */
+@media (min-width: screen-sm-min) {
+  .notification {
+    .glyphicon {
+      font-size: size4
+      left: size2
+      position: absolute
+      top: size3
+    }
+  }
+}
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: screen-md-min) {
   .breadcrumb {
     margin-bottom: size1
+  }
+
+  .notification {
+    .glyphicon {
+      font-size: size5
+      left: size3
+      top: size2
+    }
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: screen-lg-min) {
+  .notification {
+    .glyphicon {
+      font-size: size6
+      left: size6
+      top: size1
+    }
   }
 }

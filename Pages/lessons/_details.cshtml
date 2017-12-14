@@ -159,17 +159,20 @@
 
     @if (Model.IsLastLessonInCategory)
     {
-        <div class="row bg-success text-light text-center border-radius-10">
+        <div class="row">
             <div class="col-xs-12">
-                <p class="text-heading2">Congratulations!</p>
-                @if (Model.Level.ToString() != "Advanced")
-                {
-                    <p>This was the last lesson in the @Model.Level category. Time to move onto the <a href="@nextCategoryLink.Url" class="text-light arrow-link">@nextCategoryLink.Text</a></p>
-                }
-                else
-                {
-                    <p>You have completed the Advanced lesson category. For now, that's all we've got, but please check back regularly, as our lesson list is never complete.</p>
-                }
+                <div class="notification notification-success">
+                    <span class="glyphicon glyphicon-ok"></span>
+                    <p class="text-heading2">Congratulations!</p>
+                    @if (Model.Level.ToString() != "Advanced")
+                    {
+                        <p>This was the last lesson in the @Model.Level category. Time to move onto the <a href="@nextCategoryLink.Url" class="text-light arrow-link">@nextCategoryLink.Text</a></p>
+                    }
+                    else
+                    {
+                        <p>You have completed the Advanced lesson category. For now, that's all we've got, but please check back regularly, as our lesson list is never complete.</p>
+                    }
+                </div>
             </div>
         </div>
     }

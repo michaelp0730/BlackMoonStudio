@@ -134,14 +134,47 @@ footer.main {
 .breadcrumb {
   margin-bottom: 0;
 }
-.border-radius-10 {
+.notification {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+.notification.notification-success {
+  background-color: #28a745;
+  color: #fff;
+  padding: 12px;
+}
+.notification .glyphicon {
+  display: block;
+  font-size: 36px;
+}
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .notification .glyphicon {
+    font-size: 48px;
+    left: 24px;
+    position: absolute;
+    top: 36px;
+  }
 }
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .breadcrumb {
     margin-bottom: 12px;
+  }
+  .notification .glyphicon {
+    font-size: 60px;
+    left: 36px;
+    top: 24px;
+  }
+}
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .notification .glyphicon {
+    font-size: 72px;
+    left: 72px;
+    top: 12px;
   }
 }
