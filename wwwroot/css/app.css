@@ -127,6 +127,9 @@ footer.main {
 .breadcrumb {
   margin-bottom: 0;
 }
+.heading-icon .glyphicon {
+  padding-right: 12px;
+}
 .notification {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;

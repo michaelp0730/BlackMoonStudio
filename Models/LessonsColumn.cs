@@ -6,5 +6,6 @@ namespace BlackMoonStudio.Models
         public string Path { get; set; }
         public Lesson[] Lessons { get; set; }
         public bool ShowSeeAllLink { get; set; }
+        public string IconClass { get; set; }
     }
 }

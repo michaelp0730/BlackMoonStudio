@@ -1,18 +1,26 @@
 @model BlackMoonStudio.Models.LessonsColumn
 
 <div class="col-md-4">
-    <h2>@Model.Title</h2>
-    <div class="list-group">
-        @foreach (var lesson in Model.Lessons)
-        {
-            <a href="@string.Format("{0}{1}/", Model.Path, lesson.Slug)" class="list-group-item list-group-item-action">
-                <h4>@lesson.Title</h4>
-                <p>@lesson.Summary</p>
-            </a>
-        }
+    <div class="row row-size0">
+        <div class="col-xs-12">
+            <h2 class="heading-icon"><span class="glyphicon @Model.IconClass"></span> @Model.Title</h2>
+            <div class="list-group">
+                @foreach (var lesson in Model.Lessons)
+                {
+                    <a href="@string.Format("{0}{1}/", Model.Path, lesson.Slug)" class="list-group-item list-group-item-action">
+                        <h4>@lesson.Title</h4>
+                        <p>@lesson.Summary</p>
+                    </a>
+                }
+            </div>
+        </div>
     </div>
-    @if (Model.ShowSeeAllLink)
-    {
-        <a href="@Model.Path" class="arrow-link lessons-see-all">See all @Model.Title lessons</a>
-    }
+    <div class="row row-size0">
+        <div class="col-xs-12">
+            @if (Model.ShowSeeAllLink)
+            {
+                <a href="@Model.Path" class="arrow-link lessons-see-all">See all @Model.Title lessons</a>
+            }
+        </div>
+    </div>
 </div>
