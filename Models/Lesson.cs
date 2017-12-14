@@ -66,19 +66,7 @@ namespace BlackMoonStudio.Models
 
         public static List<Lesson> GetRelatedLessons(this Lesson currentLesson, List<Lesson> lessonList)
         {
-            var relatedLessons = new List<Lesson>();
-
-            foreach (var relatedLessonSlug in currentLesson.RelatedLessonSlugs)
-            {
-                foreach (var lesson in lessonList)
-                {
-                    if (lesson.Slug == relatedLessonSlug)
-                    {
-                        relatedLessons.Add(lesson);
-                    }
-                }
-            }
-            return relatedLessons;
+            return (from relatedLessonSlug in currentLesson.RelatedLessonSlugs from lesson in lessonList where lesson.Slug == relatedLessonSlug select lesson).ToList();
         }
     }
 }
