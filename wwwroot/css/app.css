@@ -227,4 +227,7 @@ footer.main {
     display: block;
     margin-top: 0;
   }
+  .lesson-sidebar .sidebar-adjacent-lesson {
+    margin-bottom: 24px;
+  }
 }

@@ -19,9 +19,19 @@
         </ul>
     }
 
+    @if (Model.PreviousLesson != null)
+    {
+        <div class="sidebar-adjacent-lesson">
+            <h4 class="border-bottom-gray">Previous Lesson</h4>
+            <a href="@Model.PreviousLesson.Url" class="arrow-link">@Model.PreviousLesson.Title</a>
+        </div>
+    }
+
     @if (Model.NextLesson != null)
     {
-        <h4 class="border-bottom-gray">Next Lesson</h4>
-        <a href="@Model.NextLesson.Url" class="arrow-link">@Model.NextLesson.Title</a>
+        <div class="sidebar-adjacent-lesson">
+            <h4 class="border-bottom-gray">Next Lesson</h4>
+            <a href="@Model.NextLesson.Url" class="arrow-link">@Model.NextLesson.Title</a>
+        </div>
     }
 </div>

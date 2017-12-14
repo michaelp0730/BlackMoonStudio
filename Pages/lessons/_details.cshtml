@@ -10,9 +10,6 @@
     var articlesColumn1 = new List<Article>();
     var articlesColumn2 = new List<Article>();
     var articlesColumn3 = new List<Article>();
-    var contentColStructure = (Model.RelatedLessons?.Any() == true || Model.NextLesson != null) ?
-        "col-md-8 col-lg-9" :
-        "col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2";
     var nextCategoryLink = new Link
     {
         Text = Model.Level.ToString() == "Intermediate" ? "Advanced category" : "Intermediate category",
@@ -76,7 +73,7 @@
     @if (Model.Content?.Text != null)
     {
         <div class="row">
-            <div class="@contentColStructure lesson-body-content">
+            <div class="col-md-8 col-lg-9 lesson-body-content">
                 @Html.Raw(Model.Content.Text)
             </div>
 
@@ -86,6 +83,7 @@
                     @Html.Partial("LessonSidebar", new LessonSidebar
                     {
                         RelatedLessons = Model.RelatedLessons,
+                        PreviousLesson = Model.PreviousLesson,
                         NextLesson = Model.NextLesson,
                     })
                 </div>
@@ -134,18 +132,27 @@
         </div>
     }
 
-    @if (Model.NextLesson != null)
-    {
-        <div class="row hidden-xs hidden-sm">
-            <div class="col-xs-12">
-                <div class="pull-right">
-                    <span class="glyphicon glyphicon-check"></span>
-                    <span>Next Lesson: </span>
-                    <a href="@Model.NextLesson.Url" class="arrow-link">@Model.NextLesson.Title</a>
-                </div>
-            </div>
+    <div class="row hidden-xs hidden-sm">
+        <div class="col-xs-12">
+            @if (Model.PreviousLesson != null)
+            {
+                <a href="@Model.PreviousLesson.Url">
+                    <span class="glyphicon glyphicon-step-backward"></span>
+                    Previous Lesson: @Model.PreviousLesson.Title
+                </a>
+            }
+
+            @if (Model.NextLesson != null)
+            {
+                <span class="pull-right">
+                    <a href="@Model.NextLesson.Url">
+                        <span class="glyphicon glyphicon-check"></span>
+                        Next Lesson: @Model.NextLesson.Title
+                    </a>
+                </span>
+            }
         </div>
-    }
+    </div>
 
     @if (Model.RelatedLessons?.Any() == true || Model.NextLesson != null)
     {

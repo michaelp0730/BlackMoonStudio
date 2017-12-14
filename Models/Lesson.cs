@@ -54,14 +54,23 @@ namespace BlackMoonStudio.Models
 
     public static class LessonHelpers
     {
-        public static Lesson GetNextLesson(this Lesson currentLesson, string[] lessonSlugsCuration, List<Lesson> lessonList)
+        public static Lesson GetAdjacentLesson(this Lesson currentLesson, string[] lessonSlugsCuration, List<Lesson> lessonList, bool getNextNotPrevious)
         {
             var currentLessonCurationIndex = Array.IndexOf(lessonSlugsCuration, currentLesson.Slug);
+            if (currentLessonCurationIndex == -1) return new Lesson();
 
-            if (currentLessonCurationIndex == -1 || lessonList.Count <= currentLessonCurationIndex + 1) return new Lesson();
-            if (string.IsNullOrEmpty(lessonSlugsCuration[currentLessonCurationIndex + 1])) return new Lesson();
-            var nextLessonSlug = lessonSlugsCuration[currentLessonCurationIndex + 1];
-            return lessonList.FirstOrDefault(x => x.Slug == nextLessonSlug);
+            if (getNextNotPrevious)
+            {
+                if (lessonList.Count <= currentLessonCurationIndex + 1) return new Lesson();
+                if (string.IsNullOrEmpty(lessonSlugsCuration[currentLessonCurationIndex + 1])) return new Lesson();
+                var nextLessonSlug = lessonSlugsCuration[currentLessonCurationIndex + 1];
+                return lessonList.FirstOrDefault(x => x.Slug == nextLessonSlug);
+            }
+
+            if (currentLessonCurationIndex == 0) return new Lesson();
+            if (string.IsNullOrEmpty(lessonSlugsCuration[currentLessonCurationIndex - 1])) return new Lesson();
+            var previousLessonSlug = lessonSlugsCuration[currentLessonCurationIndex - 1];
+            return lessonList.FirstOrDefault(x => x.Slug == previousLessonSlug);
         }
 
         public static List<Lesson> GetRelatedLessons(this Lesson currentLesson, List<Lesson> lessonList)
