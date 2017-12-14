@@ -42,7 +42,49 @@
         ],
         "RelatedLessonSlugs": [
             "welcome-to-the-guitar",
-            "holding-the-pic"
+            "holding-the-pick"
+        ]
+    },
+    {
+        "Slug": "holding-the-pick",
+        "Title": "How to hold a Guitar Pick",
+        "Summary": "An important thing to get right in the earliest stages of guitar playing, as it will make or break your technique",
+        "Url": "/lessons/beginner/holding-the-pick/",
+        "ContentKey": "HoldingThePick",
+        "Level": "Beginner",
+        "Stage": 1,
+        "Videos": [
+            {
+                "Slug": "MOjSgNeoukU",
+                "Title": "How To Hold A Guitar Pick & How to Choose One",
+                "Caption": "Andy shows you exactly how to hold a guitar pick, and how to select one"
+            },
+            {
+                "Slug": "8-grcbKnbps",
+                "Title": "How To Hold Your Pick Properly (The BEST Way, With Close Up Examples)",
+                "Caption": "A quick, easy to follow, lesson on the right way to hold a pick"
+            }
+        ],
+        "Articles": [
+            {
+                "Title": "Get a Grip: How to Hold a Guitar Pick",
+                "Caption": "It seems easy, but improper technique can seriously impede your journey.",
+                "Url": "https://www.fender.com/articles/how-to/get-a-grip-how-to-hold-a-pick"
+            },
+            {
+                "Title": "Picks, how to choose one and hold it",
+                "Caption": "A good article (with video) on how to hold a pick, and how to select a pick. Nice FAQ section included as well.",
+                "Url": "https://www.justinguitar.com/en/BC-107-PicksHolding.php"
+            },
+            {
+                "Title": "How to Hold a Guitar Pick (Plectrum)",
+                "Caption": "Fundamental Changes is a great source for learning all styles of guitar. This is a good explanation on how to hold a pick",
+                "Url": "http://www.fundamental-changes.com/how-to-hold-a-guitar-pick/"
+            }
+        ],
+        "RelatedLessonSlugs": [
+            "changing-strings",
+            "strumming-with-a-pick"
         ]
     },
     {
