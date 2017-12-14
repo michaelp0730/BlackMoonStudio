@@ -10,7 +10,7 @@
     var articlesColumn1 = new List<Article>();
     var articlesColumn2 = new List<Article>();
     var articlesColumn3 = new List<Article>();
-    var contentColStructure = Model.RelatedLessons?.Any() == true ?
+    var contentColStructure = (Model.RelatedLessons?.Any() == true || Model.NextLesson != null) ?
         "col-md-8 col-lg-9" :
         "col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2";
     var nextCategoryLink = new Link
