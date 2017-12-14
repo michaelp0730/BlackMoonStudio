@@ -77,5 +77,10 @@ namespace BlackMoonStudio.Models
         {
             return (from relatedLessonSlug in currentLesson.RelatedLessonSlugs from lesson in lessonList where lesson.Slug == relatedLessonSlug select lesson).ToList();
         }
+
+        public static bool IsLastLessonInCategory(this Lesson currentLesson, string[] lessonSlugsCuration)
+        {
+            return currentLesson.Slug == lessonSlugsCuration[lessonSlugsCuration.Length - 1];
+        }
     }
 }

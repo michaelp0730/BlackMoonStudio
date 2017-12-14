@@ -37,6 +37,7 @@ namespace BlackMoonStudio.Controllers
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = advancedLessonList.FirstOrDefault(x => x.Slug == slug);
+                        prevLesson = lesson.GetAdjacentLesson(curation?.LessonSlugs, advancedLessonList, false);
                         nextLesson = lesson.GetAdjacentLesson(curation?.LessonSlugs, advancedLessonList, true);
                         fileStream = new FileStream("Xml/Lessons/Intermediate.xml", FileMode.Open);
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
@@ -62,9 +63,18 @@ namespace BlackMoonStudio.Controllers
                             viewModel.Articles = lesson.Articles;
                             viewModel.RelatedLessons = relatedLessons.ToArray();
 
+                            if (!string.IsNullOrEmpty(prevLesson.Title) && !string.IsNullOrEmpty(prevLesson.Url))
+                            {
+                                viewModel.PreviousLesson = prevLesson;
+                            }
+
                             if (!string.IsNullOrEmpty(nextLesson.Title) && !string.IsNullOrEmpty(nextLesson.Url))
                             {
                                 viewModel.NextLesson = nextLesson;
+                            }
+                            else if (lesson.IsLastLessonInCategory(curation?.LessonSlugs))
+                            {
+                                viewModel.IsLastLessonInCategory = true;
                             }
 
                             return View("~/Pages/lessons/_details.cshtml", viewModel);
@@ -86,6 +96,7 @@ namespace BlackMoonStudio.Controllers
                     if (!string.IsNullOrEmpty(slug))
                     {
                         lesson = intermediateLessonList.FirstOrDefault(x => x.Slug == slug);
+                        prevLesson = lesson.GetAdjacentLesson(curation?.LessonSlugs, intermediateLessonList, false);
                         nextLesson = lesson.GetAdjacentLesson(curation?.LessonSlugs, intermediateLessonList, true);
                         fileStream = new FileStream("Xml/Lessons/Intermediate.xml", FileMode.Open);
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
@@ -111,9 +122,18 @@ namespace BlackMoonStudio.Controllers
                             viewModel.Articles = lesson.Articles;
                             viewModel.RelatedLessons = relatedLessons.ToArray();
 
+                            if (!string.IsNullOrEmpty(prevLesson.Title) && !string.IsNullOrEmpty(prevLesson.Url))
+                            {
+                                viewModel.PreviousLesson = prevLesson;
+                            }
+
                             if (!string.IsNullOrEmpty(nextLesson.Title) && !string.IsNullOrEmpty(nextLesson.Url))
                             {
                                 viewModel.NextLesson = nextLesson;
+                            }
+                            else if (lesson.IsLastLessonInCategory(curation?.LessonSlugs))
+                            {
+                                viewModel.IsLastLessonInCategory = true;
                             }
 
                             return View("~/Pages/lessons/_details.cshtml", viewModel);
@@ -170,9 +190,7 @@ namespace BlackMoonStudio.Controllers
                             {
                                 viewModel.NextLesson = nextLesson;
                             }
-                            else if (string.IsNullOrEmpty(nextLesson.Title) &&
-                                       string.IsNullOrEmpty(nextLesson.Url) &&
-                                       lesson.Slug == curation?.LessonSlugs[curation.LessonSlugs.Length - 1])
+                            else if (lesson.IsLastLessonInCategory(curation?.LessonSlugs))
                             {
                                 viewModel.IsLastLessonInCategory = true;
                             }
