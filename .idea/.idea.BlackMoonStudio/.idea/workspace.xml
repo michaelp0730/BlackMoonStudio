@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0bb09c50-30f9-4f45-8bd4-7b72accbed38" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.BlackMoonStudio/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.BlackMoonStudio/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/lessons/_details.cshtml" afterPath="$PROJECT_DIR$/Pages/lessons/_details.cshtml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stylus/PrimaryStyles.css" afterPath="$PROJECT_DIR$/Stylus/PrimaryStyles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Stylus/PrimaryStyles.styl" afterPath="$PROJECT_DIR$/Stylus/PrimaryStyles.styl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wwwroot/css/app.css" afterPath="$PROJECT_DIR$/wwwroot/css/app.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,8 +47,8 @@
       <file leaf-file-name="PrimaryStyles.styl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Stylus/PrimaryStyles.styl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="929">
-              <caret line="218" column="22" lean-forward="true" selection-start-line="218" selection-start-column="22" selection-end-line="218" selection-end-column="22" />
+            <state relative-caret-position="262">
+              <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -60,7 +57,7 @@
       <file leaf-file-name="_details.cshtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/lessons/_details.cshtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
+            <state relative-caret-position="858">
               <caret line="174" column="22" lean-forward="false" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
               <folding>
                 <marker date="1513212561315" expanded="true" signature="30:55" ph="..." />
@@ -464,12 +461,12 @@
       <workItem from="1513038985001" duration="17757000" />
       <workItem from="1513185445591" duration="801000" />
       <workItem from="1513186326599" duration="4543000" />
-      <workItem from="1513190920699" duration="12760000" />
+      <workItem from="1513190920699" duration="12952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37409000" />
+    <option name="totallyTimeSpent" value="37601000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1180,8 +1177,8 @@
         <state relative-caret-position="665">
           <caret line="160" column="6" lean-forward="false" selection-start-line="160" selection-start-column="6" selection-end-line="160" selection-end-column="6" />
           <folding>
-            <marker date="1513213443337" expanded="true" signature="2630:2654" ph="{...}" />
-            <marker date="1513213443337" expanded="true" signature="3441:3443" ph="{...}" />
+            <marker date="1513213654480" expanded="true" signature="2630:2654" ph="{...}" />
+            <marker date="1513213654480" expanded="true" signature="3441:3443" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1366,7 +1363,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/lessons/_details.cshtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
+        <state relative-caret-position="858">
           <caret line="174" column="22" lean-forward="false" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
           <folding>
             <marker date="1513212561315" expanded="true" signature="30:55" ph="..." />
@@ -1449,8 +1446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Stylus/PrimaryStyles.styl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="929">
-          <caret line="218" column="22" lean-forward="true" selection-start-line="218" selection-start-column="22" selection-end-line="218" selection-end-column="22" />
+        <state relative-caret-position="262">
+          <caret line="186" column="0" lean-forward="false" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
           <folding />
         </state>
       </provider>

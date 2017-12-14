@@ -64,13 +64,8 @@ footer.main {
 }
 
 .bg-logo {
-  align-items: center
   background-color: color-navy
-  background-image: url("/images/logo-bg.png");
-  background-size: cover
   color: white
-  display: flex
-  min-height: 260px
 }
 
 .bg-navy {
@@ -187,6 +182,14 @@ footer.main {
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: screen-sm-min) {
+  .bg-logo {
+    align-items: center
+    background-image: url("/images/logo-bg.png");
+    background-size: cover
+    display: flex
+    min-height: 260px
+  }
+
   .notification {
     .glyphicon {
       font-size: size4

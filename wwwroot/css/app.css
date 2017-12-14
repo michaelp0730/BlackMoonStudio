@@ -51,13 +51,8 @@ footer.main {
   padding: 72px 0;
 }
 .bg-logo {
-  align-items: center;
   background-color: #001433;
-  background-image: url("/images/logo-bg.png");
-  background-size: cover;
   color: #fff;
-  display: flex;
-  min-height: 260px;
 }
 .bg-navy {
   background-color: #001433;
@@ -149,6 +144,13 @@ footer.main {
   font-size: 36px;
 }
 @media (min-width: 768px) {
+  .bg-logo {
+    align-items: center;
+    background-image: url("/images/logo-bg.png");
+    background-size: cover;
+    display: flex;
+    min-height: 260px;
+  }
   .notification .glyphicon {
     font-size: 48px;
     left: 24px;
