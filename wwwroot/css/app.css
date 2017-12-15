@@ -187,6 +187,9 @@ footer.main {
 .lesson-sidebar {
   display: none;
 }
+.sidebar-adjacent-lesson {
+  margin-bottom: 24px;
+}
 .lessons-see-all {
   float: right;
   left: -13px;
@@ -226,8 +229,5 @@ footer.main {
   .lesson-sidebar {
     display: block;
     margin-top: 0;
-  }
-  .lesson-sidebar .sidebar-adjacent-lesson {
-    margin-bottom: 24px;
   }
 }

@@ -154,16 +154,14 @@
         </div>
     </div>
 
-    @if (Model.RelatedLessons?.Any() == true || Model.NextLesson != null)
-    {
-        <div class="hidden-md hidden-lg">
-            @Html.Partial("LessonSidebar", new LessonSidebar
-            {
-                RelatedLessons = Model.RelatedLessons,
-                NextLesson = Model.NextLesson,
-            })
-        </div>
-    }
+    <div class="hidden-md hidden-lg">
+        @Html.Partial("LessonSidebar", new LessonSidebar
+        {
+            RelatedLessons = Model.RelatedLessons,
+            PreviousLesson = Model.PreviousLesson,
+            NextLesson = Model.NextLesson,
+        })
+    </div>
 
     @if (Model.IsLastLessonInCategory)
     {
