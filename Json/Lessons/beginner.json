@@ -1,5 +1,32 @@
 [
     {
+        "Slug": "basic-pick-strumming",
+        "Title": "Basic pick strumming techniques",
+        "Summary": "The foundation to playing electric rhythm guitar in time",
+        "Url": "/lessons/beginner/basic-pick-strumming/",
+        "ContentKey": "BasicPickStrumming",
+        "Level": "Beginner",
+        "Stage": 1,
+        "Genres": [],
+        "Videos": [
+            {
+                "Slug": "1SyT17VAtgg",
+                "Title": "How To Strum a Guitar With a Pick For Beginners - 8 Top Tips - Drue James",
+                "Caption": "How to strum a guitar with a pick for beginner guitarists. When followed these 8 top tips will make strumming feel easier and sound more consistent."
+            },
+            {
+                "Slug": "Y4dYCEvxWTE",
+                "Title": "Basic Strumming for Guitar: Lesson how to strum correctly: Acoustic Guitar easy",
+                "Caption": "Marty Schwartz from GuitarJamz is a great teacher. Although he uses an acoustic guitar in this video, the concepts he explains translate perfectly to electric guitar as well. This video does a nice job of explaining the foundation of musical rhythm. At the end he shows you some good strumming patterns to practice."
+            }
+        ],
+        "Articles": [],
+        "RelatedLessonSlugs": [
+            "holding-the-pick",
+            "the-5-basic-chord-forms"
+        ]
+    },
+    {
         "Slug": "changing-strings",
         "Title": "Changing your guitar strings",
         "Summary": "Something every guitar player needs to be comfortable with, regardless of level",
@@ -202,8 +229,8 @@
             }
         ],
         "RelatedLessonSlugs": [
-            "changing-strings",
-            "the-5-basic-chord-forms"
+            "holding-the-pick",
+            "changing-strings"
         ]
     }
 ]
