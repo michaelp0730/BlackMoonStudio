@@ -18,11 +18,85 @@
                 "Slug": "Y4dYCEvxWTE",
                 "Title": "Basic Strumming for Guitar: Lesson how to strum correctly: Acoustic Guitar easy",
                 "Caption": "Marty Schwartz from GuitarJamz is a great teacher. Although he uses an acoustic guitar in this video, the concepts he explains translate perfectly to electric guitar as well. This video does a nice job of explaining the foundation of musical rhythm. At the end he shows you some good strumming patterns to practice."
+            },
+            {
+                "Slug": "h6fMu_wVh_4",
+                "Title": "Guitar Strumming Secrets EXPOSED!",
+                "Caption": "Mike from The Art of Guitar does a good job explaining down-strums versus up-strums."
+            },
+            {
+                "Slug": "hzC0orOGARw",
+                "Title": "5 Essential Strumming Patterns - Beginner Guitar Lessons",
+                "Caption": "An excellent breakdown of essential strumming patterns. Each of these patterns builds on the previous one learned."
             }
         ],
-        "Articles": [],
+        "Articles": [
+            {
+                "Title": "6 Ways to Strum Like a Pro",
+                "Caption": "It's about the rhythm, man. We've got some quick tips for your right hand.",
+                "Url": "https://www.fender.com/articles/play/how-to-strum-beginner-guitar-tips"
+            },
+            {
+                "Title": "How to Strum a Guitar",
+                "Caption": "An easy-to-follow strumming guide with written explanations, complemented by silent video to illustrate the techniques.",
+                "Url": "https://www.wikihow.com/Strum-a-Guitar"
+            }
+        ],
         "RelatedLessonSlugs": [
             "holding-the-pick",
+            "the-5-basic-chord-forms"
+        ]
+    },
+    {
+        "Slug": "changing-chords-smoothly",
+        "Title": "Changing Chords Smoothly",
+        "Summary": "Learn how to transition chords cleanly and smoothly, without buzz or muted strings",
+        "Url": "/lessons/beginner/changing-chords-smoothly/",
+        "ContentKey": "ChangingChordsSmoothly",
+        "Level": "Beginner",
+        "Stage": 2,
+        "Genres": [],
+        "Videos": [
+            {
+                "Slug": "kzs_8iQ9b2A",
+                "Title": "Changing Guitar Chords Smoothly - Beginner Guitar Lesson",
+                "Caption": "Stresses the fundamentals of playing chords cleanly, understanding chords, and forming muscle memory"
+            },
+            {
+                "Slug": "pBacbX9yefA",
+                "Title": "A, D and E Chords - Easy Chord Changes Using Anchor Fingers - Beginner Guitar Lessons [BC-114]",
+                "Caption": "A quick video that explains the benefits of using an anchor finger to make chord changes easier"
+            },
+            {
+                "Slug": "StAYtPs2tVU",
+                "Title": "Beginner Guitar Chords - Learn how to change chords FASTER !",
+                "Caption": "A nice breakdown on posture, chord theory, repetition, and practice"
+            },
+            {
+                "Slug": "3_qpDtfLgs8",
+                "Title": "The D-C-G Trick : What Famous Bands Did With Easy Chords!",
+                "Caption": "Take the chord changing techniques you just learned and combine them with this very popular chord sequence. Suddenly you'll be playing plenty of songs you've heard for years."
+            }
+        ],
+        "Articles": [
+            {
+                "Title": "How To Learn Challenging Guitar Chord Changes",
+                "Caption": "One of the most fundamental skills to develop if you want to play guitar well is the ability to change chords accurately and reliably.",
+                "Url": "http://www.musesmuse.com/col-guitarpractice-chordchanges.html"
+            },
+            {
+                "Title": "5 Tips to Master Chord Changes",
+                "Caption": "The key to playing any song is smooth, fast chord changes.",
+                "Url": "https://www.fender.com/articles/play/5-tips-to-master-chord-changes"
+            },
+            {
+                "Title": "Exercises for Practicing Guitar Chords",
+                "Caption": "There are several ways to master the technique of changing chords, so let’s look at a couple of exercises using basic guitar chords.",
+                "Url": "https://takelessons.com/blog/exercises-for-practicing-guitar-chords-z01"
+            }
+        ],
+        "RelatedLessonSlugs": [
+            "basic-pick-strumming",
             "the-5-basic-chord-forms"
         ]
     },
