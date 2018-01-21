@@ -199,16 +199,41 @@
         "Genres": [],
         "Videos": [
             {
-                "Slug": "",
-                "Title": "",
-                "Caption": ""
+                "Slug": "vTJhpjIA0Fc",
+                "Title": "Major Scale",
+                "Caption": "The Singing School plays us the major scale. Use this as a reference if you can't hear the major scale in your head."
+            },
+            {
+                "Slug": "E4DDVLMsiLw",
+                "Title": "A Simple Trick to Memorize The Major Scale | Steve Stine | Guitar Zoom",
+                "Caption": "Steve Stine does a nice job breaking down the major scale, including how to remember the pattern behind the scale, and how to create the scale for any key."
+            },
+            {
+                "Slug": "vKsfpQY8beE",
+                "Title": "Learn The Major Scale On Guitar - Lead Guitar Lesson #3",
+                "Caption": "This lesson not only teaches you the major scale in different keys, but it also does a good job of introducing scale diagrams, which are just like chord diagrams, but they show you all the notes of the scale, rather than the notes of a particular chord."
+            },
+            {
+                "Slug": "hHM-YR1U6K8",
+                "Title": "Number One Scale to Learn to Play - Major Scale",
+                "Caption": "Eric does a good job teaching the major scale, and explaining why it's so important to learn the major scale in order to understand various other concepts in music."
             }
         ],
         "Articles": [
             {
-                "Title": "",
-                "Caption": "",
-                "Url": ""
+                "Title": "The Major Scale - Pattern 1",
+                "Caption": "Our friends at Justin Guitar explain the major scale on guitar, provide scale tablature and diagrams, and include a video demonstrating everything.",
+                "Url": "https://www.justinguitar.com/en/SC-251-MajorScalePattern1.php"
+            },
+            {
+                "Title": "Music Theory: Scales #1 → Major & Minor Scale Construction...",
+                "Caption": "Another way of explaining the pattern for building a major scale. At the bottom is an interactive form where you can test your major scale knowledge. This article also gets into minor scales, but that's out of scope for this lesson.",
+                "Url": "http://freeandeasyguitar.com/music_theory/scales.shtml"
+            },
+            {
+                "Title": "The Major Scale on Guitar",
+                "Caption": "A very detailed article that not only explains and shows the theory behind the major scale, but also gets into the basics of chord theory, and multiple positions for the major scale. This is stuff we'll be getting deeper into later, so if it doesn't make sense yet, don't worry. It all comes with time.",
+                "Url": "http://www.fretjam.com/major-scale.html"
             }
         ],
         "RelatedLessonSlugs": []
