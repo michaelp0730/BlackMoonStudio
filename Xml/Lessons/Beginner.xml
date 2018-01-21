@@ -67,6 +67,111 @@
             </Text>
         </Content>
         <Content>
+            <Key>MusicTheoryBasicsPart1</Key>
+            <Text>
+                <![CDATA[
+                    <p>It's not uncommon for the eyes of guitar players to begin to gloss over when the topic of music theory comes up. The reason for this is that because the guitar is such a pattern-based instrument, many (maybe even most) of us never learned theory to begin with. We learned the guitar by learning to play our favorite songs, learning basic open chords and bar chords, learning a few solo patterns, and just running with it. While not 'knowing' your instrument was a badge of pride for many punk and grunge bands, even some of the all-time greats like Stevie Ray Vaughan readily admitted that they couldn't read music, and didn't come from a traditional scholastic musical background. They learned to play with feel, and from their heart, and that was enough to take them far.</p>
+                    <p>That said, it's well worth the time investment to at least learn the basics of music theory, and what that looks like on the guitar. That way when you read or hear someone say "The blues scale is just the minor pentatonic scale with an added flat 5th" you will understand what they mean. One thing to keep in mind when it comes to learning theory is this - you should study it, learn it, and understand it, then try to forget all of it when playing in a live situation. The reason is simple - when you're thinking too much about what to play, your music starts sounding very mechanical and predictable. What you want is to learn the theory, and put it into practice on the guitar so that it becomes a natural part of your playing, rather than something you have to think about while playing.</p>
+                    <p>For this lesson, the only thing we're going to focus on is learning the major scale. By the end of this lesson you will know how to build a major scale in any key because you will know all the notes of the chromatic scale, and you'll know the intervals that make up a major scale. If this sounds intimidating, it's only because of the unfamiliar verbiage, however I promise the concepts being discussed in this lesson are very simple.</p>
+                    <p>Okay, so before we even talk about the major scale, let's just talk about notes. There are 12 unique notes in each octave, then you move onto the next octave where the same 12 notes get repeated in a new pitch (higher or lower). On a guitar, you can experience these 11 unique notes by choosing any single string you want, plucking that string open (meaning don't fret it), then pluck it again while fretting it on the first fret, then pluck it again while fretting the second fret, and continuing this all the way up to the 11th fret. By the time you reach that 11th fret, you will have played every note in the musical chromatic scale. Once you reach the 12th fret, you'll be playing the same note you played when you played the string open at the beginning, except now you're playing that note in a higher octave.</p>
+                    <p>The chromatic scale doesn't really sound good because you're just playing every note there is, but it can be useful in small quantities for certain types of soloing. Let's take a look at the names of every note in the chromatic scale, starting from A</p>
+                    <ul>
+                        <li>A</li>
+                        <li>A#</li>
+                        <li>B</li>
+                        <li>C</li>
+                        <li>C#</li>
+                        <li>D</li>
+                        <li>D#</li>
+                        <li>E</li>
+                        <li>F</li>
+                        <li>F#</li>
+                        <li>G</li>
+                        <li>G#</li>
+                    </ul>
+                    <p>Notice those # signs? Those are pronouced "sharp", so you've got A sharp, C sharp, D sharp, F sharp, and G sharp. Another important thing to notice is that not every whole note has a sharp associated with it. Notice that there is no B# or E#. The musical reasons for this are beyond the scope of this lesson, so here's what you need to know. Every note in that list is a half-step apart from the next note on the list. "Steps" are music's way of measuring the distance between notes. When you hear anyone referring to steps, you generally only going to hear the terms "step" or "half-step". The distance between C and C# is a half-step. Meanwhile the distance between C and D is a whole step.</p>
+                    <p>Going back to our guitar example where we picked an open string, then picked that string on each fret from 1 to 11, lets do that again, but let's specifically do it on the 5th string, which is the A string. Looking at the list above, play the open A string, then play it on the first fret. Now you're playing A#. Now play that string on the second fret and you're playing a B note. Play it on the third fret and you're playing a C note. Continue this all the way up to the 11th fret and you will have played each note in the list above in that exact order. Then play the 5th string on the 12th fret and you're now playing another A note, except this time it's being played one octave higher in pitch than when you played it open.</p>
+                    <p>The other important thing to learn here is that a half-step is equal to one fret on the guitar. So if you're playing an A note on the open 5th string, then you play the first fret of the 5th string, you're now playing an A#, which is a half-step above A. This rule applies literally everywhere on the guitar fretboard. No matter which note you're playing, if you were to fret that note one fret higher, you would then being playing a note that is a half-step higher than the original note.</p>
+                    <p>So a one fret increment is equal to a half-step increment. What about a whole step increment? Well, whole steps are always two frets on the guitar. Always. So for example, if I'm playing a C note on the 5th string 3rd fret, going a whole step up to D would be to play the same string on the 5th fret.</p>
+                    <p>Remember how in that list above several of the notes had a # next to them? Well, that's a totally valid way of writing every note, but it's not the only way. Instead of using sharps, we could also write the notes of the chromatic scale with b (flats), like this:</p>
+                    <ul>
+                        <li>A</li>
+                        <li>Bb</li>
+                        <li>B</li>
+                        <li>C</li>
+                        <li>Db</li>
+                        <li>D</li>
+                        <li>Eb</li>
+                        <li>E</li>
+                        <li>F</li>
+                        <li>Gb</li>
+                        <li>G</li>
+                        <li>Ab</li>
+                    </ul>
+                    <p>Those are literally the exact same tones as the ones in the first list, but we're using their flat names instead of their sharp names. What this means is that while A# and Bb are different in name, they are identical in tone, meaning for all intents and purposes they are the same note. From a playing perspective, it's impossible to distinuish an A# from a Bb, and the same thing goes for C# and Db, same for D# and Eb, same for F# and Gb, and same for G# and Ab.</p>
+                    <p>Although it's totally valid to call a note Gb, it would be uncommon to hear a guitar player say that because we normally say F#. Similarly, guitar players tend to say Bb rather than A#. Again, neither would be wrong from a musical perspective, it's just more of a convention thing.</p>
+                    <p>So before we get to the major scale let's just recap a couple things:</p>
+                    <ul>
+                        <li>The chromatic scale consists of 12 unique notes</li>
+                        <li>Every one of these notes is a half-step apart from the next or previous note</li>
+                        <li>Whole notes are normally a whole step apart (A-B, C-D, D-E, F-G, & G-A) but B-C and E-F are only a half-step apart</li>
+                        <li>Half-steps are represented on the guitar by a distance of 1 fret</li>
+                        <li>Whole steps are represented on the guitar by a distance of 2 frets</li>
+                        <li>The in between notes can be referenced with their corresponding sharp or flat sign</li>
+                    </ul>
+                    <p>Okay, with this knowledge in mind, learning the major scale is really easy. The most difficult part of this lesson is now behind us, but before we discuss how to build a major scale, we need to know what a major scale sounds like. If you've ever heard someone singing "Doe, Ray, Me, Fa, So, La, Ti, Doe", that's the major scale. If you don't know what I'm talking about, don't worry, just have a look at the videos below. I'm sure everyone will instantly recognize the major scale because it is literally the foundation of all western music, which is why we're learning it first.</p>
+                    <p>Looking at the Doe Ray Me example, we can see that there is a total of 8 notes in the scale, but 2 of the are Doe, meaning they are an octave apart. This means that there are 7 distinct notes in the major scale. Just sing "Doe, Ray, Me, Fa, So, La, Ti" and you will have sung all 7 notes. The reason we normally finish it with a second "Doe" at the end is because it's the root note of the scale, so the music naturally resolves there. This raises an important point - no matter which key you want to play the major scale in, the root note of that key is the first note you play. So for example, if you want to play a C major scale, the first note to play in that scale is C. Same goes for any other key.</p>
+                    <p>Ready to learn how to build a major scale in any key? It's actually quite easy, you just have to remember this basic pattern: Whole, Whole, Half, Whole, Whole, Whole, Half. Another way to say it would be: two wholes, half, three wholes, half. As you may have guessed, we're referring to whole steps and half steps. Basically, all you have to do is pick a key, play the root note of that key on your instrument, then count up in the increments I just listed to play the remaining notes of the scale. Let's look at an example.</p>
+                    <p>Music teachers always initially teach the major scale in the key of C, because it contains no sharps or flats, so let's start there. I'm going to list all the notes of the chromatic scale, starting at C, and the notes that are in the C major scale will be bolded.</p>
+                    <ul>
+                        <li><strong>C</strong></li>
+                        <li>C#</li>
+                        <li><strong>D</strong></li>
+                        <li>D#</li>
+                        <li><strong>E</strong></li>
+                        <li><strong>F</strong></li>
+                        <li>F#</li>
+                        <li><strong>G</strong></li>
+                        <li>G#</li>
+                        <li><strong>A</strong></li>
+                        <li>A#</li>
+                        <li><strong>B</strong></li>
+                        <li><strong>C</strong></li>
+                    </ul>
+                    <p>Looking at this, now recite the pattern from before: Whole step, Whole step, Half step, Whole step, Whole step, Whole step, Half step. From C-D is a whole step, from D-E is a whole step, E-F is a half step, F-G is a whole step, G-A is a whole step, A-B is a whole step, and B-C is a half-step. It's perfect, and as previously mentioned, the C major scale contains no sharps or flats, so it's really easy to memorize.</p>
+                    <p>Let's do another example using a different key. Since I was creating the lists above starting with A, let's write out the A chromatic scale (like before) and bold the notes of the A major scale.</p>
+                    <ul>
+                        <li><strong>A</strong></li>
+                        <li>A#</li>
+                        <li><strong>B</strong></li>
+                        <li>C</li>
+                        <li><strong>C#</strong></li>
+                        <li><strong>D</strong></li>
+                        <li>D#</li>
+                        <li><strong>E</strong></li>
+                        <li>F</li>
+                        <li><strong>F#</strong></li>
+                        <li>G</li>
+                        <li><strong>G#</strong></li>
+                        <li><strong>A</strong></li>
+                    </ul>
+                    <p>So the notes of the A major scale are A, B, C#, D, E, F#, & G# (or Ab). This means that the A major scale contains 3 sharps or flats. Using this system, you can easily create the major scale for any of the 12 keys in the chromatic scale.</p>
+                    <p>I know this is a lot to digest, so for now we're going to leave it at that. In future lessons we will discuss how the major scale is used as a reference point for other scales and chords. While I hope this explanation was extensive enough to demonstrate the necessary concepts without going too deep into detail, I realize that stuff like this can be explained in many different ways, so I have selected the following videos and articles to give you more perspectives on the same concept. Before moving on, your goal should be to understand the following:</p>
+                    <ul>
+                        <li>The chromatic scale represents every tone in western music</li>
+                        <li>There are 12 notes in the chromatic scale</li>
+                        <li>You can build a major scale from any single note in the chromatic scale</li>
+                        <li>The 'distance' between notes is measured in half-steps and whole steps</li>
+                        <li>A half-step is represented on the guitar by moving up or down one fret</li>
+                        <li>A whole step is represented on the guitar by moving up or down two frets</li>
+                        <li>B-C and E-F are the only whole notes in music who are separated by a half-step. The rest of the whole notes have a sharp/flat between them.</li>
+                        <li>The pattern for building a major scale is: Whole step, Whole step, Half step, Whole step, Whole step, Whole step, Half step (2 wholes, half, 3 wholes, half)</li>
+                        <li>You can build any major scale for any key by starting with the root note of the key, then using that pattern to select the remaining notes.</li>
+                    </ul>
+                ]]>
+            </Text>
+        </Content>
+        <Content>
             <Key>WelcomeToTheGuitar</Key>
             <Text>
                 <![CDATA[

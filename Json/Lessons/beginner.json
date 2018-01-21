@@ -189,6 +189,31 @@
         ]
     },
     {
+        "Slug": "music-theory-basics-part-1",
+        "Title": "Music Theory Basics, Part 1",
+        "Summary": "Learn the basics of music theory from the perspective of a guitar player, including how to build a major scale in any key",
+        "Url": "/lessons/beginner/music-theory-basics-part-1",
+        "ContentKey": "MusicTheoryBasicsPart1",
+        "Level": "Beginner",
+        "Stage": 2,
+        "Genres": [],
+        "Videos": [
+            {
+                "Slug": "",
+                "Title": "",
+                "Caption": ""
+            }
+        ],
+        "Articles": [
+            {
+                "Title": "",
+                "Caption": "",
+                "Url": ""
+            }
+        ],
+        "RelatedLessonSlugs": []
+    },
+    {
         "Slug": "the-5-basic-chord-forms",
         "Title": "The 5 Basic Chord Forms",
         "Summary": "Cowboy Chords! A right of passage for any new player",
