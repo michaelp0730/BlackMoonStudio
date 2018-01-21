@@ -21,7 +21,12 @@
             <Key>ChangingChordsSmoothly</Key>
             <Text>
                 <![CDATA[
-                    <p>Needs content</p>
+                    <p>In order to change chords smoothly, you first need to be able to play the chords cleanly. In order to do that, you have to have correct hand and wrist placement for your fretting hand. As a general rule, you want your thumb to be placed in the center of the neck of the guitar, and your wrist should be bent away from the guitar neck. This allows your fingers to arch over the fretboard, which then allows you to fret each note of the chord with your finger tips.</p>
+                    <p>Imagine an opposite hand placement for a moment. Your thumb is up near the 6th string, and your wrist is flat up against the neck of the guitar. Your fingers are flatter over the fretboard, which makes it more difficult to fret the strings with your finger tips. Instead, you end up fretting the strings with the pads of your fingers, which causes you to inadverntently mute other strings (and may also cause string buzz). With the exception of chord forms that require fretting notes with your thumb, this type of hand position should be avoided. For all conventional chord types, get that thumb in the middle of the back of the neck, bend the wrist away from the neck, and your fingers will have plenty of clearance to fret each note cleanly.</p>
+                    <p>Once you're able to play chords cleanly without any unwanted notes, accidentally muted strings, and no buzzing, you can start working on transitioning between chords. Just like anything else, this mostly comes down to practice and muscle memory. In other words, the more you do it, the easier and better it gets.</p>
+                    <p>One simple technique that you can use to help facilitate smooth chord changes is to have an anchor finger. The idea is that you're playing two different chords that have a note in common, so you anchor a finger on that note and keep it there while other fingers move to their new locations, based on the next chord. By keeping even one single finger attached to the fretboard during the change, your hand is much less likely to get out of position. It just gives you a reference point to your hand's placement on the neck. For comparison's sake, try changing chords where you remove ever finger from the fretboard every time you make a change. It's going to be a lot harder to get each finger back in the correct place for the next chord.</p>
+                    <p>While anchor fingers are great, unfortunately they're not always going to be possible. There are going to be plenty of times where you're switching chords, and the two chords don't share any notes in common. Here's another idea to facilitate smooth chord changes: always keep your strumming hand in motion. This is actually a staple in rhythm guitar playing, but it's totally applicable here too. You want your strumming hand to stay in motion, and in time with whatever you're playing. Even on the off beats where you're intentionally not hitting any notes, your strumming hand should keep moving in a strumming motion, just without hitting any strings.</p>
+                    <p>The way this concept pertains to smooth chord changes is this - if you're playing a song, staying in time is probably the most important thing you can do. Even if you don't play the chord cleanly, by keeping your strumming hand moving in time, you're not not going to get out of sync with the song. It's a fact of life that you're going to blow chords from time to time, but the key is to not let one blown chord cause you to then blow the next chord. Your two hands have to be working independent of each other so that they can always be ready for the next chord. While this isn't a cure all for smooth chord changes, it's an important concept when it comes to staying in time and always being ready for the next chord.</p>
                 ]]>
             </Text>
         </Content>
@@ -125,16 +130,16 @@
                     <p>Music teachers always initially teach the major scale in the key of C, because it contains no sharps or flats, so let's start there. I'm going to list all the notes of the chromatic scale, starting at C, and the notes that are in the C major scale will be bolded.</p>
                     <ul>
                         <li><strong>C</strong></li>
-                        <li>C#</li>
+                        <li><small>C#</small></li>
                         <li><strong>D</strong></li>
-                        <li>D#</li>
+                        <li><small>D#</small></li>
                         <li><strong>E</strong></li>
                         <li><strong>F</strong></li>
-                        <li>F#</li>
+                        <li><small>F#</small></li>
                         <li><strong>G</strong></li>
-                        <li>G#</li>
+                        <li><small>G#</small></li>
                         <li><strong>A</strong></li>
-                        <li>A#</li>
+                        <li><small>A#</small></li>
                         <li><strong>B</strong></li>
                         <li><strong>C</strong></li>
                     </ul>
@@ -142,16 +147,16 @@
                     <p>Let's do another example using a different key. Since I was creating the lists above starting with A, let's write out the A chromatic scale (like before) and bold the notes of the A major scale.</p>
                     <ul>
                         <li><strong>A</strong></li>
-                        <li>A#</li>
+                        <li><small>A#</small></li>
                         <li><strong>B</strong></li>
-                        <li>C</li>
+                        <li><small>C</small></li>
                         <li><strong>C#</strong></li>
                         <li><strong>D</strong></li>
-                        <li>D#</li>
+                        <li><small>D#</small></li>
                         <li><strong>E</strong></li>
-                        <li>F</li>
+                        <li><small>F</small></li>
                         <li><strong>F#</strong></li>
-                        <li>G</li>
+                        <li><small>G</small></li>
                         <li><strong>G#</strong></li>
                         <li><strong>A</strong></li>
                     </ul>
