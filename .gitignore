@@ -1,8 +1,8 @@
 obj/
 bin/
-bin/
 lib
 .idea/
 .vscode/
 *.dll
 *.pdb
+prepros-6.config
