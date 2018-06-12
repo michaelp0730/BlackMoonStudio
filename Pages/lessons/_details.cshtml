@@ -53,137 +53,146 @@
     }
 }
 
-<div class="container-fluid">
-    <div class="row row-size4 bg-navy">
-        <div class="col-xs-12">
-            <h1>@Model.Title</h1>
-            <p><em>@Model.Summary</em>
-            </p>
-        </div>
-    </div>
-    <div class="row row-size0">
-        <div class="col">
-            <div class="breadcrumb lesson-details-breadcrumb">
-                <a asp-page="/Index">Home</a> /
-                <a href="@breadcrumbLevel.Url">@breadcrumbLevel.Text</a> /
-                @Model.Title
+<section class="bg-navy">
+    <div class="container">
+        <div class="row row-size4">
+            <div class="col-xs-12">
+                <h1>@Model.Title</h1>
+                <p>
+                    <em>@Model.Summary</em>
+                </p>
             </div>
         </div>
     </div>
-    @if (Model.Content?.Text != null)
-    {
-        <div class="row">
-            <div class="col-md-8 col-lg-9 lesson-body-content">
-                <div class="row">
-                    <div class="col-lg-9">
-                        @Html.Raw(Model.Content.Text)
-                    </div>
-                </div>
-            </div>
+</section>
 
-            @if (Model.RelatedLessons?.Any() == true || Model.NextLesson != null)
-            {
-                <div class="lesson-sidebar">
-                    @Html.Partial("LessonSidebar", new LessonSidebar
-                    {
-                        RelatedLessons = Model.RelatedLessons,
-                        PreviousLesson = Model.PreviousLesson,
-                        NextLesson = Model.NextLesson,
-                    })
+<section class="breadcrumb-container">
+    <div class="container">
+        <div class="row row-size0">
+            <div class="col-xs-12">
+                <div class="breadcrumb lesson-details-breadcrumb">
+                    <a asp-page="/Index">Home</a> /
+                    <a href="@breadcrumbLevel.Url">@breadcrumbLevel.Text</a> /
+                    @Model.Title
                 </div>
-            }
-         </div>
-    }
-
-    @if (Model.Videos?.Any() == true)
-    {
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 border-bottom-gray text-center">
-                <h2 class="heading-icon"><span class="glyphicon glyphicon-film"></span> Videos</h2>
-                <p>Check out the following YouTube videos to better understand the concepts for this lesson</p>
             </div>
         </div>
-        <div class="videos-container">
-            @foreach (var video in Model.Videos)
-            {
-                <div class="row row-size2 border-bottom-gray">
-                    <div class="col-lg-6">
-                        <h3>@video.Title</h3>
-                        <p>@video.Caption</p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        @if (Model.Content?.Text != null)
+        {
+            <div class="row">
+                <div class="col-md-8 col-lg-9 lesson-body-content">
+                    @Html.Raw(Model.Content.Text)
+                </div>
+
+                @if (Model.RelatedLessons?.Any() == true || Model.NextLesson != null)
+                {
+                    <div class="lesson-sidebar">
+                        @Html.Partial("LessonSidebar", new LessonSidebar
+                        {
+                            RelatedLessons = Model.RelatedLessons,
+                            PreviousLesson = Model.PreviousLesson,
+                            NextLesson = Model.NextLesson,
+                        })
                     </div>
-                    <div class="col-lg-6">
-                        <div class="video-container">
-                            <iframe src="@($"https://www.youtube.com/embed/{video.Slug}")" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                }
+            </div>
+        }
+
+        @if (Model.Videos?.Any() == true)
+        {
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 border-bottom-gray text-center">
+                    <h2 class="heading-icon"><span class="glyphicon glyphicon-film"></span> Videos</h2>
+                    <p>Check out the following YouTube videos to better understand the concepts for this lesson</p>
+                </div>
+            </div>
+            <div class="videos-container">
+                @foreach (var video in Model.Videos)
+                {
+                    <div class="row row-size2 border-bottom-gray">
+                        <div class="col-lg-6">
+                            <h3>@video.Title</h3>
+                            <p>@video.Caption</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="video-container">
+                                <iframe src="@($"https://www.youtube.com/embed/{video.Slug}")" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
-                </div>
-            }
-        </div>
-    }
-
-    @if (articleCount > 0)
-    {
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 border-bottom-gray text-center">
-                <h2 class="heading-icon"><span class="glyphicon glyphicon-book"></span> Articles</h2>
-                <p>Expand your knowledge of the concepts from this lesson by reading the following articles</p>
+                }
             </div>
-        </div>
-        <div class="row">
-            @Html.Partial("ArticlesColumn", articlesColumn1.ToArray())
-            @Html.Partial("ArticlesColumn", articlesColumn2.ToArray())
-            @Html.Partial("ArticlesColumn", articlesColumn3.ToArray())
-        </div>
-    }
+        }
 
-    <div class="row hidden-xs hidden-sm">
-        <div class="col-xs-12">
-            @if (Model.PreviousLesson != null)
-            {
-                <a href="@Model.PreviousLesson.Url">
-                    <span class="glyphicon glyphicon-step-backward"></span>
-                    Previous Lesson: @Model.PreviousLesson.Title
-                </a>
-            }
-
-            @if (Model.NextLesson != null)
-            {
-                <span class="pull-right">
-                    <a href="@Model.NextLesson.Url">
-                        <span class="glyphicon glyphicon-check"></span>
-                        Next Lesson: @Model.NextLesson.Title
-                    </a>
-                </span>
-            }
-        </div>
-    </div>
-
-    <div class="hidden-md hidden-lg">
-        @Html.Partial("LessonSidebar", new LessonSidebar
+        @if (articleCount > 0)
         {
-            RelatedLessons = Model.RelatedLessons,
-            PreviousLesson = Model.PreviousLesson,
-            NextLesson = Model.NextLesson,
-        })
-    </div>
-
-    @if (Model.IsLastLessonInCategory)
-    {
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="notification notification-success">
-                    <span class="glyphicon glyphicon-ok"></span>
-                    <p class="text-heading2">Congratulations!</p>
-                    @if (Model.Level.ToString() != "Advanced")
-                    {
-                        <p>This was the last lesson in the @Model.Level category. Time to move onto the <a href="@nextCategoryLink.Url" class="text-light arrow-link">@nextCategoryLink.Text</a></p>
-                    }
-                    else
-                    {
-                        <p>You have completed the Advanced lesson category. For now, that's all we've got, but please check back regularly, as our lesson list is never complete.</p>
-                    }
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2 border-bottom-gray text-center">
+                    <h2 class="heading-icon"><span class="glyphicon glyphicon-book"></span> Articles</h2>
+                    <p>Expand your knowledge of the concepts from this lesson by reading the following articles</p>
                 </div>
             </div>
+            <div class="row">
+                @Html.Partial("ArticlesColumn", articlesColumn1.ToArray())
+                @Html.Partial("ArticlesColumn", articlesColumn2.ToArray())
+                @Html.Partial("ArticlesColumn", articlesColumn3.ToArray())
+            </div>
+        }
+
+        <div class="row hidden-xs hidden-sm">
+            <div class="col-xs-12">
+                @if (Model.PreviousLesson != null)
+                {
+                    <a href="@Model.PreviousLesson.Url">
+                        <span class="glyphicon glyphicon-step-backward"></span>
+                        Previous Lesson: @Model.PreviousLesson.Title
+                    </a>
+                }
+
+                @if (Model.NextLesson != null)
+                {
+                    <span class="pull-right">
+                        <a href="@Model.NextLesson.Url">
+                            <span class="glyphicon glyphicon-check"></span>
+                            Next Lesson: @Model.NextLesson.Title
+                        </a>
+                    </span>
+                }
+            </div>
         </div>
-    }
-</div>
+
+        <div class="hidden-md hidden-lg">
+            @Html.Partial("LessonSidebar", new LessonSidebar
+            {
+                RelatedLessons = Model.RelatedLessons,
+                PreviousLesson = Model.PreviousLesson,
+                NextLesson = Model.NextLesson,
+            })
+        </div>
+
+        @if (Model.IsLastLessonInCategory)
+        {
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="notification notification-success">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        <p class="text-heading2">Congratulations!</p>
+                        @if (Model.Level.ToString() != "Advanced")
+                        {
+                            <p>This was the last lesson in the @Model.Level category. Time to move onto the <a href="@nextCategoryLink.Url" class="text-light arrow-link">@nextCategoryLink.Text</a></p>
+                        }
+                        else
+                        {
+                            <p>You have completed the Advanced lesson category. For now, that's all we've got, but please check back regularly, as our lesson list is never complete.</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>
