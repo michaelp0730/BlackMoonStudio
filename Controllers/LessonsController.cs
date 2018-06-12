@@ -37,6 +37,12 @@ namespace BlackMoonStudio.Controllers
                     if (!string.IsNullOrEmpty(slug))
                     {
                         currentLesson = advancedLessonList.FirstOrDefault(x => x.Slug == slug);
+
+                        if (currentLesson == null)
+                        {
+                            return View("404");
+                        }
+
                         prevLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, advancedLessonList, false);
                         nextLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, advancedLessonList, true);
                         fileStream = new FileStream("Xml/Lessons/Intermediate.xml", FileMode.Open);
@@ -96,6 +102,12 @@ namespace BlackMoonStudio.Controllers
                     if (!string.IsNullOrEmpty(slug))
                     {
                         currentLesson = intermediateLessonList.FirstOrDefault(x => x.Slug == slug);
+
+                        if (currentLesson == null)
+                        {
+                            return View("404");
+                        }
+
                         prevLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, intermediateLessonList, false);
                         nextLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, intermediateLessonList, true);
                         fileStream = new FileStream("Xml/Lessons/Intermediate.xml", FileMode.Open);
@@ -155,6 +167,12 @@ namespace BlackMoonStudio.Controllers
                     if (!string.IsNullOrEmpty(slug))
                     {
                         currentLesson = beginnerLessonList.FirstOrDefault(x => x.Slug == slug);
+
+                        if (currentLesson == null)
+                        {
+                            return View("404");
+                        }
+
                         prevLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, beginnerLessonList, false);
                         nextLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, beginnerLessonList, true);
                         fileStream = new FileStream("Xml/Lessons/Beginner.xml", FileMode.Open);
