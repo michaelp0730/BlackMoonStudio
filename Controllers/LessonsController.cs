@@ -175,7 +175,7 @@ namespace BlackMoonStudio.Controllers
 
                         prevLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, beginnerLessonList, false);
                         nextLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, beginnerLessonList, true);
-                        fileStream = new FileStream("Xml\\Lessons\\Beginner.xml", FileMode.Open);
+                        fileStream = new FileStream("wwwroot\\xml\\lessons\\beginner.xml", FileMode.Open);
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
                         fileStream.Dispose();
                         content = lessonContents.Contents.FirstOrDefault(x => x.Key == currentLesson?.ContentKey);
