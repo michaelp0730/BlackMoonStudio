@@ -45,7 +45,7 @@ namespace BlackMoonStudio.Controllers
 
                         prevLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, advancedLessonList, false);
                         nextLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, advancedLessonList, true);
-                        fileStream = new FileStream("Xml/Lessons/Intermediate.xml", FileMode.Open);
+                        fileStream = new FileStream("Xm\\Lessons\\Intermediate.xml", FileMode.Open);
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
                         fileStream.Dispose();
                         content = lessonContents.Contents.FirstOrDefault(x => x.Key == currentLesson?.ContentKey);
@@ -110,7 +110,7 @@ namespace BlackMoonStudio.Controllers
 
                         prevLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, intermediateLessonList, false);
                         nextLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, intermediateLessonList, true);
-                        fileStream = new FileStream("Xml/Lessons/Intermediate.xml", FileMode.Open);
+                        fileStream = new FileStream("Xml\\Lessons\\Intermediate.xml", FileMode.Open);
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
                         fileStream.Dispose();
                         content = lessonContents.Contents.FirstOrDefault(x => x.Key == currentLesson?.ContentKey);
@@ -175,7 +175,7 @@ namespace BlackMoonStudio.Controllers
 
                         prevLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, beginnerLessonList, false);
                         nextLesson = currentLesson.GetAdjacentLesson(curation?.LessonSlugs, beginnerLessonList, true);
-                        fileStream = new FileStream("Xml/Lessons/Beginner.xml", FileMode.Open);
+                        fileStream = new FileStream("Xml\\Lessons\\Beginner.xml", FileMode.Open);
                         lessonContents = (LessonContents)lessonContentsSerializer.Deserialize(fileStream);
                         fileStream.Dispose();
                         content = lessonContents.Contents.FirstOrDefault(x => x.Key == currentLesson?.ContentKey);
