@@ -6,3 +6,4 @@ lib
 *.dll
 *.pdb
 prepros-6.config
+.vs/
