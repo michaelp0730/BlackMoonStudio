@@ -24,7 +24,7 @@ namespace BlackMoonStudio.Models
         {
             List<Lesson> lessonList;
 
-            using (var sr = new StreamReader(path: $"Json/Lessons/{level}.json"))
+            using (var sr = new StreamReader(path: $"wwwroot/json/lessons/{level}.json"))
             {
                 lessonList = JsonConvert.DeserializeObject<List<Lesson>>(sr.ReadToEnd());
             }
@@ -36,7 +36,7 @@ namespace BlackMoonStudio.Models
         {
             List<Curation> curationList;
 
-            using (var sr = new StreamReader(path: $"Json/Curation/{list}.json"))
+            using (var sr = new StreamReader(path: $"wwwroot/json/curation/{list}.json"))
             {
                 curationList = JsonConvert.DeserializeObject<List<Curation>>(sr.ReadToEnd());
             }
