@@ -2,22 +2,42 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using Microsoft.Azure.Search;
 using Newtonsoft.Json;
 
 namespace BlackMoonStudio.Models
 {
     public class Lesson
     {
+        [System.ComponentModel.DataAnnotations.Key]
+        [IsFilterable]
         public string Slug { get; set; }
+
+        [IsSearchable]
         public string Title { get; set; }
+
+        [IsSearchable]
         public string Summary { get; set; }
+
         public string Url { get; set; }
+
         public string ContentKey { get; set; }
-        public Levels Level { get; set; }
+
+        [IsFilterable, IsFacetable]
+        public string Level { get; set; }
+
+        [IsFilterable, IsFacetable]
         public int Stage { get; set; }
+
+        [IsFilterable, IsFacetable]
         public string[] Genres { get; set; }
+
+        [JsonIgnore]
         public IEnumerable<Video> Videos { get; set; }
+
+        [JsonIgnore]
         public Article[] Articles { get; set; }
+
         public string[] RelatedLessonSlugs { get; set; }
 
         public static List<Lesson> GetLessonsByCategory(string level)
@@ -45,12 +65,12 @@ namespace BlackMoonStudio.Models
         }
     }
 
-    public enum Levels
-    {
-        Beginner,
-        Intermediate,
-        Advanced
-    }
+    //public enum Levels
+    //{
+    //    Beginner,
+    //    Intermediate,
+    //    Advanced
+    //}
 
     public static class LessonHelpers
     {
